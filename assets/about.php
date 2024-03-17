@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <title>About Us</title>
 </head>
-<body style="background-color: #ffffe5;
+<body class="body" style="background-color: #ffffe5;
 ">
     <?php include 'header.php'; ?>
     <div style="

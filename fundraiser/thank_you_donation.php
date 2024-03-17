@@ -29,7 +29,7 @@ if(!isset($_SESSION['chi_receipt_number'])) {
     .container button {
         color: #ffffff;
         font-size:20px;
-        padding:1rem 19.1rem;
+        padding:1rem 19rem;
         background-color: #007BFF;
     }
     .container a{
@@ -39,7 +39,7 @@ if(!isset($_SESSION['chi_receipt_number'])) {
 </style>
 
 <?php include '../assets/header.php'; ?>
-
+<body class="body">
 <div class="container">
     
             <h1>
@@ -58,5 +58,5 @@ if(!isset($_SESSION['chi_receipt_number'])) {
             </div>
 </div>
 
-
+</body>
 <?php include '../assets/footer.php'; ?>

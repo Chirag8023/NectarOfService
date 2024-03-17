@@ -36,7 +36,7 @@
     </style>
     <title>Contact Us</title>
 </head>
-<body style="background-color: #ffffe5;">
+<body style="background-color: #ffffe5;" class="body">
     <?php include 'header.php'; ?>
     <div class="grid-container" style="margin-top: 7rem;">
         <div class="left-content">
