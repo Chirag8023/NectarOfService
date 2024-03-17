@@ -31,7 +31,7 @@ try {
         $toDate = $toDate->format('Y-m-d');
         
         if ($fromDate > $toDate) {
-            $_SESSION['error'] = "Error: From Date cannot be greater than To Date.";
+            $_SESSION['chi_error'] = "Error: From Date cannot be greater than To Date.";
             session_write_close(); // Save session data before redirect
             header("Location: " . $_SERVER["PHP_SELF"]);
             exit();
@@ -75,8 +75,8 @@ try {
         <label for="to_date">To Date:</label>
         <input type="date" id="to_date" name="to_date" required>
         <button type="submit" name="submit">Generate CSV</button>
-        <?php if (isset($_SESSION['error'])) { ?>
-        <p style="color:red"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+        <?php if (isset($_SESSION['chi_error'])) { ?>
+        <p style="color:red"><?php echo $_SESSION['chi_error']; unset($_SESSION['chi_error']); ?></p>
         <?php } ?>
     </form>
 

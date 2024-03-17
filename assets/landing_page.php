@@ -23,8 +23,8 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         <!-- Left section -->
         <div class="left-section">
             <h1>Let's<br>contribute<br>to greater cause</h1>
-            <p>Join us with the community to get into adventerous journey of the life.</p><br>
-            <button class="join-now-button">Join Now</button>
+            <p>Don't wait for perfect time. Make it perfect.</p><br>
+            <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php"><button class="join-now-button">Contribute Now</button></a>
         </div>
 
         <!-- Right section -->

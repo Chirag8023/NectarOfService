@@ -6,9 +6,9 @@
             <div class="f-content-left">
                 <div class="footer-logo">NectarOfService</div>
                 <div class="social-links">
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank" class="social-link">Youtube</a>
+                    <a href="https://twitter.com/" target="_blank" class="social-link">Twitter</a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-link">Instagram</a>
                 </div>
             </div>
             <div class="middle">
@@ -20,8 +20,8 @@
                 </div>
             </div>
             <div class="common-links">
-                <a href="about.php" class="common-link">About</a>
-                <a href="#" class="common-link">Contact</a>
+                <a href="http://localhost/NectarOfService/assets/about.php" class="common-link">About</a>
+                <a href="http://localhost/NectarOfService/assets/contact.php" class="common-link">Contact</a>
                 <!-- Add more common links as needed -->
             </div>
         </div>

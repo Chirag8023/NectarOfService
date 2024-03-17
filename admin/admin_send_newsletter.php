@@ -51,9 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         include ADMIN_SEND_NEWSLETTER_BASE_PATH .'../assets/scripts/dbconnect.php';
         sendNewsletter($conn, $_POST['newsletter_content']);
-        $_SESSION['success_message'] = 'Email sent successfully.';
+        $_SESSION['chi_success_message'] = 'Email sent successfully.';
     } catch (Exception $e) {
-        $_SESSION['error_message'] = $e->getMessage();
+        $_SESSION['chi_error_message'] = $e->getMessage();
     }
 
     // Redirect to prevent form resubmission
@@ -68,10 +68,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <input type="submit" value="Send Newsletter">
     <br>
-    <?php if(isset($_SESSION['success_message'])) { ?>
-        <p style="color:green"><?php echo $_SESSION['success_message']; unset($_SESSION['success_message']); ?></p>
+    <?php if(isset($_SESSION['chi_success_message'])) { ?>
+        <p style="color:green"><?php echo $_SESSION['chi_success_message']; unset($_SESSION['chi_success_message']); ?></p>
     <?php } ?>
-    <?php if(isset($_SESSION['error_message'])) { ?>
-        <p style="color:red"><?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?></p>
+    <?php if(isset($_SESSION['chi_error_message'])) { ?>
+        <p style="color:red"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
     <?php } ?>
 </form>

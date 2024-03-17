@@ -53,11 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     mail($to, $subject, $body, $headers);
                     
                 // session variable to sent name, amount, receipt number and date to the next page
-                $_SESSION['donor_name'] = $donor_name;
-                $_SESSION['amount'] = $amount;
-                $_SESSION['receipt_number'] = "R-0".$campaign_id."-0".$last_id;
-                $_SESSION['date'] = date("Y-m-d");
-                $_SESSION['campaign_name'] = $campaign_name;
+                $_SESSION['chi_donor_name'] = $donor_name;
+                $_SESSION['chi_amount'] = $amount;
+                $_SESSION['chi_receipt_number'] = "R-0".$campaign_id."-0".$last_id;
+                $_SESSION['chi_date'] = date("Y-m-d");
+                $_SESSION['chi_campaign_name'] = $campaign_name;
                 
                 header("Location: http://localhost/nectarofservice/fundraiser/thank_you_donation.php");
                 exit;

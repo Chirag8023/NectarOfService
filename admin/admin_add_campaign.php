@@ -54,12 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $newFileName = handleFileUpload($_FILES['image']);
 
         if (insertCampaign($conn, $title, $description, $goal, $newFileName)) {
-            $_SESSION['success'] = "Campaign created successfully";
+            $_SESSION['chi_success'] = "Campaign created successfully";
             header("Location: " . $_SERVER['PHP_SELF']);
             exit;
         }
     } catch (Exception $e) {
-        $_SESSION['error'] = $e->getMessage();
+        $_SESSION['chi_error'] = $e->getMessage();
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     }
@@ -81,12 +81,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 
 <?php
-if (isset($_SESSION['error'])) {
-    echo '<div style="color:red;">' . $_SESSION['error'] . '</div>';
-    unset($_SESSION['error']);
+if (isset($_SESSION['chi_error'])) {
+    echo '<div style="color:red;">' . $_SESSION['chi_error'] . '</div>';
+    unset($_SESSION['chi_error']);
 }
-if (isset($_SESSION['success'])) {
-    echo '<div style="color:green;">' . $_SESSION['success'] . '</div>';
-    unset($_SESSION['success']);
+if (isset($_SESSION['chi_success'])) {
+    echo '<div style="color:green;">' . $_SESSION['chi_success'] . '</div>';
+    unset($_SESSION['chi_success']);
 }
 ?>

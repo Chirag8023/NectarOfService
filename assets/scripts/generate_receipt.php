@@ -5,13 +5,13 @@ if (session_status() == PHP_SESSION_NONE) {
 require('fpdf/fpdf.php');
 
 // Generate the receipt PDF
-generateReceipt($_SESSION['donor_name'], $_SESSION['date'], $_SESSION['receipt_number'], $_SESSION['amount']);
+generateReceipt($_SESSION['chi_donor_name'], $_SESSION['chi_date'], $_SESSION['chi_receipt_number'], $_SESSION['chi_amount']);
 
 
 // Function to generate the receipt PDF
 function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf = new FPDF();
-    $pdf->AddPage('P', array(250, 200));
+    $pdf->AddPage('P', array(220, 200));
 
     $pdf->SetFont('Arial', 'B', 20);
     $pdf->SetTextColor(0);
@@ -23,7 +23,7 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->Cell(0, 10, 'Receipt Number: ' . $receiptNo, 0, 1);
 
     $pdf->Cell(0, 10, 'Name: ' . $name, 0, 1);
-    $pdf->Cell(0, 10, 'Amount Donated: ' . $amount, 0, 1);
+    $pdf->Cell(0, 10, 'Amount Donated: Rs ' . $amount . '/-', 0, 1);
 
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->Cell(0, 10, 'Tax Information:', 0, 1);
@@ -37,8 +37,6 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->Cell(0, 10, 'including but not limited to providing food assistance, educational opportunities,', 0, 1);
     $pdf->Cell(0, 10, 'and resources for those in need.', 0, 1);
 
-    $pdf->Cell(0, 10, '[Your Organization\'s Name]', 0, 1);
-    $pdf->Cell(0, 10, '[Your Organization\'s Contact Information]', 0, 1);
 
     $pdf->SetFont('Arial', 'B', 18);
     $pdf->Cell(0, 20, 'Thank you for your support!', 0, 1, 'C');
@@ -47,13 +45,6 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->Cell(0, 10, 'Sincerely,', 0, 1, 'L');
     $pdf->Cell(0, 10, 'Vice Chairman', 0, 1, 'L');
     $pdf->Cell(0, 10, 'Nectar Of Service', 0, 1, 'L');
-
-    //unset the session variables
-    unset($_SESSION['donor_name']);
-    unset($_SESSION['date']);
-    unset($_SESSION['receipt_number']);
-    unset($_SESSION['amount']);
-    
 
     // Output the PDF to the browser
     $pdf->Output('D', 'receipt.pdf');

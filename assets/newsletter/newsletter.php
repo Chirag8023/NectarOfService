@@ -20,15 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
             $stmt->bind_param("ss", $subscriber_name, $subscriber_email);
 
             if ($stmt->execute()) {
-                $_SESSION['success_message'] = "Thank you for subscribing!";
+                $_SESSION['chi_success_message'] = "Thank you for subscribing!";
             } 
         }
         else {
-            $_SESSION['success_message'] = "See you soon!";
+            $_SESSION['chi_success_message'] = "See you soon!";
         }
         $stmt->close();
     } else{
-        $_SESSION['success_message'] = "Something went wrong! Please Try again.";
+        $_SESSION['chi_success_message'] = "Something went wrong! Please Try again.";
     }
     
     $conn->close();
@@ -44,8 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
     <div><h2>Join<br>Newsletter</h2></div>
     <div>
     <p>Get updates about how your contributions are changing the world!</p>
-    <?php if (isset($_SESSION['success_message'])) { ?>
-        <p style="color: rgb(255, 255, 255);"><?php echo $_SESSION['success_message']; ?></p>
+    <?php if (isset($_SESSION['chi_success_message'])) { ?>
+        <p style="color: rgb(255, 255, 255);"><?php echo $_SESSION['chi_success_message']; ?></p>
         <script>
         window.onload = function() {
         let newsletterSection = document.querySelector('.newsletter');
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
             }
         }
         </script>
-        <?php unset($_SESSION['success_message']); ?>
+        <?php unset($_SESSION['chi_success_message']); ?>
     <?php } ?>
     <form method="post">
         <input type="text" id="name" name="subscriber_name" placeholder="name" required>

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <script src="http://localhost/NectarOfService/assets/scripts/fetch_donations.js"></script>
 </head>
-<body style="background-color: #14b6a6;" class='body'>
+<body style="background-color: #14b68e;" class='body'>
 <?php include "../assets/header.php"; ?>
     <div class="main-area">
     <h2>Ongoing Fundraising Campaigns</h2>
+    <p style="color:#fff; margin-top:-10px; text-shadow: 1px 1px 2px #666;">*All campaigns are eligible  for 80D tax benefits.</p>
     <br>
     <div id="campaignContent">
         <?php include '../assets/scripts/get_ongoing_campaigns.php'; ?>
