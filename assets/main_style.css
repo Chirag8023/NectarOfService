@@ -1,9 +1,4 @@
 @font-face {
-	font-family: 'Indie Flower';
-	src: local('Indie Flower'), url('http://localhost/NectarOfService/assets/fonts/IndieFlower-Regular.ttf') format('truetype');
-}
-
-@font-face {
 	font-family: 'Cormorant Garamond';
 	src: local('Cormorant Garamond'), url('http://localhost/NectarOfService/assets/fonts/CormorantGaramond-Regular.ttf') format('truetype');
 }
@@ -14,18 +9,8 @@
 }
 
 @font-face {
-	font-family: 'Bungee Shade';
-	src: local('Bungee Shade'), url('http://localhost/NectarOfService/assets/fonts/BungeeShade-Regular.ttf') format('truetype');
-}
-
-@font-face {
 	font-family: 'Bungee';
 	src: local('Bungee'), url('http://localhost/NectarOfService/assets/fonts/Bungee-Regular.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Darker Grotesque';
-	src: local('Darker Grotesque'), url('http://localhost/NectarOfService/assets/fonts/DarkerGrotesque-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
@@ -172,7 +157,6 @@
 }
 
 .common-links {
-	font-family: 'Cormorant Garamond' !important;
 	font-weight: 500;
 	font-size: large;
 	margin-top: 10px;

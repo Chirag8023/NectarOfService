@@ -16,7 +16,7 @@
             font-family: 'inter';
             font-size: 30px;
             color: #000;
-            margin-top:-1rem;
+            margin-top:-0.5rem;
         }
 
         
@@ -38,7 +38,7 @@
 </head>
 <body style="background-color: #ffffe5;" class="body">
     <?php include 'header.php'; ?>
-    <div class="grid-container" style="margin-top: 7rem;">
+    <div class="grid-container" style="padding-top: 4.5rem;">
         <div class="left-content">
             <h1>Contact us</h1>
             <p>
