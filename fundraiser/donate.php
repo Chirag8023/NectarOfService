@@ -65,8 +65,12 @@ if(mysqli_num_rows($result) > 0) {
                 <input type="button" value="Donate" class="header-button" id="donateButton">
             </form>
                 <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?text=Donate%20in%20this%20awesome%20campaign%20on%20NectarOfService%20Platform:%0A<?php echo $campaign_name?>%0A%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?> " target="_blank"><button style="background-color:#08a0e9;"><img src="../assets/images/twitter_logo.png">Share on Twitter</button></a>
-                <a href="https://web.whatsapp.com/send?text=Hello,%0AI hope this message finds you well. I wanted to share with you an important opportunity to contribute to a meaningful cause. Please take a moment to explore this campaign: <?php echo $campaign_name;?> on NectarofService platform.%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A%0A*Your support would mean a lot to them as they strive to make a positive impact.*" target="_blank"><button style="background-color:#25d366;"><img src="../assets/images/whatsapp_logo.png" style="filter: brightness(0) saturate(100%) invert(1);">Share on WhatsApp</button></a>
+                    <a href="https://twitter.com/intent/tweet?text=Donate in this awesome campaign on NectarOfService Platform:%0A<?php echo $campaign_name?>%0A%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A[DEMO PURPOSE LINK ONLY!]" target="_blank">
+                        <button style="background-color:#08a0e9;"><img src="http://localhost/nectarofservice/assets/images/twitter_logo.png">Share on Twitter</button>
+                    </a>
+                    <a href="https://web.whatsapp.com/send?text=Hello,%0AI hope this message finds you well. I wanted to share with you an important opportunity to contribute to a meaningful cause. Please take a moment to explore this campaign: <?php echo $campaign_name;?> on NectarofService platform.%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A%0A*Your support would mean a lot to them as they strive to make a positive impact.*%0A *[DEMO PURPOSE LINK ONLY!]*" target="_blank">
+                        <button style="background-color:#25d366;"><img src="http://localhost/nectarofservice/assets/images/whatsapp_logo.png" style="filter: brightness(0) saturate(100%) invert(1);">Share on WhatsApp</button>
+                    </a>
                 </div>
         </div>
     </div>
