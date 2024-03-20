@@ -14,7 +14,7 @@
 }
 
 /* Body Styles */
-body {
+.main-body {
     font-family: 'inter';
     background-color: #000;
     color: #fff;
@@ -135,4 +135,59 @@ border-radius:115px; /* Make the scrollbar more curved */
 
 .main-content::-webkit-scrollbar-thumb:hover {
 background: #000; 
+}
+
+
+.admin-login {
+    background-color: #ff0036;
+    background-image: radial-gradient(circle at center center, #c8cbff, #3B2D38), repeating-radial-gradient(circle at center center, #c8cbff, #c8cbff, 10px, transparent 25px, transparent 10px);
+    background-blend-mode: multiply; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.admin-login .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+    font-family: 'inter';
+    background-color: #ffc900;
+    border-radius: 2px;
+    border: 2px solid #000;
+    padding: 25px;
+    width: 27%;
+    box-shadow: 13px 13px #000;
+}
+
+.login-container h3 {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.login-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.login-container input {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    padding: 10px;
+    width: 90%;
+    border: 2px solid #000;
+    border-radius: 2px;
+    font-family: 'inter';
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.login-container label {
+    
+    font-size: 1rem;
+    font-weight: 500;
 }

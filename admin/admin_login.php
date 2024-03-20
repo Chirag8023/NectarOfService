@@ -1,11 +1,12 @@
 <?php
-//session start if not started
+// Start session if not started
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-// if already logged in, redirect to admin_main.php
+
+// If already logged in, redirect to admin_main.php
 if (isset($_SESSION['username'])) {
-    header("Location:http://localhost/nectarofservice/admin/admin_main.php");
+    header("Location: http://localhost/nectarofservice/admin/admin_main.php");
     exit;
 }
 
@@ -28,17 +29,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
 
             // Redirect to a secure page on successful login
-            header("Location:http://localhost/nectarofservice/admin/admin_main.php");
+            header("Location: http://localhost/nectarofservice/admin/admin_main.php");
             exit;
         } else {
-            // Display an error message if the password is incorrect
-            $error_message = "Invalid username or password!";
+            // Store error message in session
+            $_SESSION['error_message'] = "Invalid username or password!";
         }
     } else {
-        // Display an error message if the username does not exist
-        $error_message = "Invalid username or password!";
+        // Store error message in session
+        $_SESSION['error_message'] = "Invalid username or password!";
     }
+
+    // Redirect to the same page to prevent form resubmission
+    header("Location: {$_SERVER['REQUEST_URI']}");
+    exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -47,18 +53,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="admin_style.css">
 </head>
-<body>
-    <h2>Login</h2>
-    <?php if (isset($error_message)) { ?>
-        <p style="color:red;"><?php echo $error_message; ?></p>
+<body class="admin-login">
+    <div class="login-container">
+    <h3>NectarOfService</h3>
+    <h2>Admin Login</h2>
+    <?php if (isset($_SESSION['error_message'])) { ?>
+        <p style="color:#df0059;"><?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?></p>
     <?php } ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <label for="username">Username:</label>
+        <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
+        <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
         <button type="submit">Login</button>
     </form>
+    </div>
 </body>
 </html>

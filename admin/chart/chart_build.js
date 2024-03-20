@@ -114,8 +114,8 @@
                 label: 'Amount Donated (Rs.)',
                 data: campaignsData.campaigns.map(campaign => campaign.campaign_total),
                 backgroundColor: ['#FF408199', '#FFEB3B99', '#03DAC699', '#6200EA99', '#FF6E4099', '#00E67699'],
-                borderColor: 'rgba(0, 0, 0, 0.5)',
-                borderWidth: 1
+                borderColor: '#FF408199',
+                borderWidth: 2
             }]
         },
         options: {
