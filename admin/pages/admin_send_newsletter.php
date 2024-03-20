@@ -1,9 +1,10 @@
 <?php
+define('ADMIN_SEND_NEWSLETTER_BASE_PATH', dirname(__FILE__) . '/');
+include ADMIN_SEND_NEWSLETTER_BASE_PATH .'../../assets/scripts/auth_check.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-define('ADMIN_SEND_NEWSLETTER_BASE_PATH', dirname(__FILE__) . '/');
 
 function sendNewsletter($conn, $newsletter_content) {
     // Retrieve subscribers from database
@@ -49,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Newsletter content cannot be empty.");
         }
 
-        include ADMIN_SEND_NEWSLETTER_BASE_PATH .'../assets/scripts/dbconnect.php';
+        include ADMIN_SEND_NEWSLETTER_BASE_PATH .'../../assets/scripts/dbconnect.php';
         sendNewsletter($conn, $_POST['newsletter_content']);
         $_SESSION['chi_success_message'] = 'Email sent successfully.';
     } catch (Exception $e) {

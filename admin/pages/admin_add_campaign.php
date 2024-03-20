@@ -1,9 +1,12 @@
 <?php
+define('ADMIN_ADD_CAMPAIGN_BASE_PATH', dirname(__FILE__) . '/');
+include ADMIN_ADD_CAMPAIGN_BASE_PATH .'../../assets/scripts/auth_check.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-define('ADMIN_ADD_CAMPAIGN_BASE_PATH', dirname(__FILE__) . '/');
-include ADMIN_ADD_CAMPAIGN_BASE_PATH .'../assets/scripts/dbconnect.php';
+
+include ADMIN_ADD_CAMPAIGN_BASE_PATH .'../../assets/scripts/dbconnect.php';
 
 function handleFileUpload($file) {
     $fileName = $file['name'];
@@ -19,7 +22,7 @@ function handleFileUpload($file) {
         }
 
         $newFileName = uniqid('', true) . '.' . $fileExtension;
-        $uploadDestination = ADMIN_ADD_CAMPAIGN_BASE_PATH .'../assets/images/' . $newFileName;
+        $uploadDestination = ADMIN_ADD_CAMPAIGN_BASE_PATH .'../../assets/images/' . $newFileName;
         if (!move_uploaded_file($fileTmpName, $uploadDestination)) {
             throw new Exception("Error uploading file.");
         }

@@ -1,3 +1,9 @@
+<?php
+// define a base path of this file
+define('ADMIN_MAIN_BASE_PATH', dirname(__FILE__) . '/');
+include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,7 @@
     <header>
         <h3>NectarOfService</h3>      
         <h2>ADMIN DASHBOARD</h2>
-        <a href="#"><button>Logout</button></a>   
+        <a href="http://localhost/nectarofservice/assets/scripts/admin_logout.php"><button>Logout</button></a>   
     </header>
 
     <aside class="sidebar">

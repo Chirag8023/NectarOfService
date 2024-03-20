@@ -1,9 +1,12 @@
 <?php
+define('DONATION_SHEET_DOWNLOAD_BASE_PATH', dirname(__FILE__) . '/');
+include DONATION_SHEET_DOWNLOAD_BASE_PATH . '../../assets/scripts/auth_check.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 // Include database connection configuration
-require '../assets/scripts/dbconnect.php';
+include DONATION_SHEET_DOWNLOAD_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
 function fetchDonations($pdo, $fromDate, $toDate) {
     // Query to fetch donations within the date range
@@ -32,7 +35,6 @@ try {
         
         if ($fromDate > $toDate) {
             $_SESSION['chi_error'] = "Error: From Date cannot be greater than To Date.";
-            session_write_close(); // Save session data before redirect
             header("Location: " . $_SERVER["PHP_SELF"]);
             exit();
         } else {
