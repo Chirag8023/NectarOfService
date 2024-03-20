@@ -12,6 +12,8 @@
     const donationsByDateResponse = await fetch('http://localhost/nectarofservice/admin/chart/chart_people_data.php');
     const donationsByDateData = await donationsByDateResponse.json();
 
+  
+  
     // Chart for total amount donated
     const totalAmountCtx = document.getElementById('totalAmountChart').getContext('2d');
     // Chart for total amount donated
@@ -22,7 +24,7 @@
         data: {
             labels: totalAmountLabels,
             datasets: [{
-                label: 'Total Amount',
+                label: 'Total Amount (Rs.)',
                 data: totalAmountValues,
                 backgroundColor: '#03DAC655',
                 borderColor: '#03DAC6',
@@ -42,50 +44,22 @@
                 }
               },
             scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Amount  (Rs.)'
+                      }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date'
+                      }
+                }
             }
         }
     });
 
-    // Chart for donations by campaign
-    const campaignsCtx = document.getElementById('campaignsChart').getContext('2d');
-    new Chart(campaignsCtx, {
-        type: 'pie',
-        data: {
-            labels: campaignsData.campaigns.map(campaign => campaign.campaign_name),
-            datasets: [{
-                label: 'Amount Donated',
-                data: campaignsData.campaigns.map(campaign => campaign.campaign_total),
-                backgroundColor: ['#FF408199', '#FFEB3B99', '#03DAC699', '#6200EA99', '#FF6E4099', '#00E67699'],
-                borderColor: 'rgba(0, 0, 0, 0.5)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                  position: 'top',
-                },
-                title: {
-                  display: true,
-                  text: 'Campaigns Performance last 30 days',
-                  position: 'right'
-                }
-              },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
 
     // Chart for total contributors by date
     const donationsByDateCtx = document.getElementById('donationsByDateChart').getContext('2d');
@@ -114,6 +88,49 @@
                 }
               },
             scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Contributors'
+                      }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date'
+                      }
+                }   
+            }
+        }
+    });
+
+    // Chart for total donations by campaign
+    const campaignsCtx = document.getElementById('campaignsChart').getContext('2d');
+    new Chart(campaignsCtx, {
+        type: 'doughnut',
+        data: {
+            labels: campaignsData.campaigns.map(campaign => campaign.campaign_name),
+            datasets: [{
+                label: 'Amount Donated (Rs.)',
+                data: campaignsData.campaigns.map(campaign => campaign.campaign_total),
+                backgroundColor: ['#FF408199', '#FFEB3B99', '#03DAC699', '#6200EA99', '#FF6E4099', '#00E67699'],
+                borderColor: 'rgba(0, 0, 0, 0.5)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                  position: 'top',
+                },
+                title: {
+                  display: true,
+                  text: 'Campaigns Performance last 30 days',
+                  position: 'right'
+                }
+              },
+            scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true
@@ -126,3 +143,13 @@
 
 // Call the function to fetch data and create charts when the page loads
 window.onload = fetchDataAndCreateCharts;
+
+function show(id) {
+    // Hide all sections
+    document.getElementById('totalAmount').style.display = 'none';
+    document.getElementById('donationsByDate').style.display = 'none';
+    document.getElementById('campaigns').style.display = 'none';
+
+    // Show the selected section
+    document.getElementById(id).style.display = 'block';
+}

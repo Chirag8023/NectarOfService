@@ -28,23 +28,35 @@
     </aside>
 
     <main class="main-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; margin-bottom:0.5rem;">
             <h1>Analytics</h1>
-            <div style="display:flex; flex-direction:column;">
-            <h2>Total Donations (last 30 days)</h2>
-            <div style="width: 1000px; margin: 0 auto;">
-                <!-- Chart for total amount donated -->
-                <canvas id="totalAmountChart" width=500></canvas>
+            <div>
+            <button onclick="show('totalAmount')">Show Total Donations</button>
+            <button onclick="show('donationsByDate')">Show Total Contributors</button>
+            <button onclick="show('campaigns')">Show Campaigns Performance</button>
             </div>
-            <h2>Total contributors (last 30 days)</h2>
-            <div style="width: 1000px; margin: 0 auto;">
-                <!-- Chart for donations by date -->
-                <canvas id="donationsByDateChart"></canvas>
             </div>
-            <h2>Campaigns Performance (last 30 days)</h2>
-            <div style="width: 500px; margin: 0 auto;">
-                <!-- Chart for donations by campaign -->
-                <canvas id="campaignsChart"></canvas> 
+            <hr>
+
+            <div id="totalAmount">
+                <h2>Total Donations (last 30 days)</h2>
+                <div style="width: 950px; margin: 0 auto;">
+                    <canvas id="totalAmountChart" width=500></canvas>
+                </div>
             </div>
+
+            <div id="donationsByDate" style="display: none;">
+                <h2>Total contributors (last 30 days)</h2>
+                <div style="width: 950px; margin: 0 auto;">
+                    <canvas id="donationsByDateChart"></canvas>
+                </div>
+            </div>
+
+            <div id="campaigns" style="display: none;">
+                <h2>Campaigns Performance (last 30 days)</h2>
+                <div style="width: 470px; margin: 0 auto;">
+                    <canvas id="campaignsChart"></canvas>
+                </div>
             </div>
     </main>
     
