@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 include 'dbconnect.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset($_SESSION["chi_csrf_token"]) && $_POST["csrf_token"] === $_SESSION["chi_csrf_token"]) {
     $campaign_id = $_POST['campaign_id'];
     $amount = $_POST['amount'];
     $donor_name = $_POST['donor_name'];

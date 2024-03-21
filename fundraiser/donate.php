@@ -1,8 +1,13 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include "../assets/scripts/dbconnect.php";
 
+//sanitize the $_GET['campaign_id'] to prevent SQL injection as int and put it in $campaign_id
+$campaign_id = filter_var($_GET['campaign_id'], FILTER_SANITIZE_NUMBER_INT);
+
 // Fetch data from fundraising_campaigns table
-$campaign_id = $_GET['campaign_id'];
 $query = "SELECT * FROM fundraising_campaigns WHERE id = $campaign_id";
 $result = mysqli_query($conn, $query);
 
@@ -12,6 +17,17 @@ if(mysqli_num_rows($result) > 0) {
     $description = $row['description'];
     $image_pathname =  '../assets/images/'. $row['image_filename'];
     $percentage = ($row["current_amount"] / $row["goal"]) * 100;
+} else {
+    // If no campaign found, redirect to 404 page
+    header("Location: http://localhost/NectarOfService/assets/404.php");
+    exit();
+}
+
+// Function to generate CSRF token
+function generate_csrf_token() {
+    $csrf_token = bin2hex(random_bytes(32));
+    $_SESSION['chi_csrf_token'] = $csrf_token;
+    return $csrf_token;
 }
 ?>
 
@@ -60,7 +76,8 @@ if(mysqli_num_rows($result) > 0) {
                     <option value="upi">UPI</option>
                     <!-- Add more payment options if needed -->
                 </select>
-
+                <!-- Add CSRF token -->
+                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                 <input type="hidden" name="campaign_id" value="<?php echo $_GET['campaign_id']; ?>">
                 <input type="button" value="Donate" class="header-button" id="donateButton">
             </form>
