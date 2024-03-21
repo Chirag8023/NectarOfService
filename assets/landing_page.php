@@ -29,7 +29,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
 
         <!-- Right section -->
         <div class="right-section">
-        <img src="#" alt="Random Image">
+        <img src="http://localhost/NectarOfService/assets/images/main.png" alt="main_image" style="width: 100%;">
         </div>
         </div>  
     </div>
