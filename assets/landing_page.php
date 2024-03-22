@@ -9,7 +9,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
     <div class="main-container">
         <!-- Left section -->
         <div class="left-section">
-            <h1>Engage in<br>Service is our constitution</h1>
+            <h1>Service is our constitution</h1>
             <p>So don't wait for perfect time. Make it perfect.</p><br>
             <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php"><button class="join-now-button">Contribute Now</button></a>
         </div>
