@@ -1,3 +1,4 @@
+//file for campaigns_home page
 document.addEventListener('DOMContentLoaded', function() {
     // Function to fetch donations recursively
     function fetchDonations() {
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Trigger next fetch when all list elements reach the end
-                setTimeout(fetchDonations, 35000); // Call fetchDonations after 30 seconds (adjust as needed)
+                setTimeout(fetchDonations, 40000); // Call fetchDonations after 40 seconds (adjust as needed)
             })
             .catch(error => {
                 console.error('Error fetching donations:', error);
