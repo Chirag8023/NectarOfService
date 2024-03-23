@@ -63,6 +63,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Newsletter</title>
+    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+</head>
+
+<body class="main-body">
+
+<?php include ADMIN_SEND_NEWSLETTER_BASE_PATH . 'admin_header.php'; ?>
+
+<main class="main-content" style="width:100vw; border-left:4px solid #000">
+
 <h2>Compose Newsletter</h2>
 <form method="post">
     <textarea name="newsletter_content" rows="10" cols="100" required></textarea>
@@ -76,3 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="color:red"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
     <?php } ?>
 </form>
+
+</main>
+</body>
+</html>

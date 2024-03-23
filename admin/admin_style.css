@@ -50,7 +50,7 @@ header h3 {
     padding: 0.5rem;
 }
 
-button {
+button, input[type="submit"] {
     background-color: #000;
     border: 1px solid #000;
     border-radius: 4px;
@@ -67,7 +67,7 @@ button {
     padding: 12px 40px;
   }
   
-button:active {
+button:active, input[type="submit"]:active {
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }

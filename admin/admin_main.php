@@ -14,11 +14,7 @@ include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
     <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 </head>
 <body class="main-body">
-    <header>
-        <h3>NectarOfService</h3>      
-        <h2>ADMIN DASHBOARD</h2>
-        <a href="http://localhost/nectarofservice/assets/scripts/admin_logout.php"><button>Logout</button></a>   
-    </header>
+    <?php include ADMIN_MAIN_BASE_PATH . 'pages/admin_header.php'; ?>
 
     <aside class="sidebar">
         <nav class="nav">

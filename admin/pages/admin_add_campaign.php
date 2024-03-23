@@ -69,6 +69,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Fundraising Campaigns</title>
+    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+</head>
+
+<body class="main-body">
+
+<?php include ADMIN_ADD_CAMPAIGN_BASE_PATH . 'admin_header.php'; ?>
+
+<main class="main-content" style="width:100vw; border-left:4px solid #000">
 
 <h2>Add New Campaign</h2>
 <form method="post" action="" enctype="multipart/form-data">
@@ -82,7 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/webp" required><br><br>
     <input type="submit" value="Create Campaign">
 </form>
-
 <?php
 if (isset($_SESSION['chi_error'])) {
     echo '<div style="color:red;">' . $_SESSION['chi_error'] . '</div>';
@@ -93,3 +106,7 @@ if (isset($_SESSION['chi_success'])) {
     unset($_SESSION['chi_success']);
 }
 ?>
+
+</main>
+</body>
+</html>

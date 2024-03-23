@@ -69,6 +69,21 @@ try {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Records Download</title>
+    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+</head>
+
+<body class="main-body">
+
+<?php include DONATION_SHEET_DOWNLOAD_BASE_PATH . 'admin_header.php'; ?>
+
+<main class="main-content" style="width:100vw; border-left:4px solid #000">
+
     <h2>Donation Records</h2>
     <p>Download records within date range.</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -81,4 +96,8 @@ try {
         <p style="color:red"><?php echo $_SESSION['chi_error']; unset($_SESSION['chi_error']); ?></p>
         <?php } ?>
     </form>
+
+</main>
+</body>
+</html>
 

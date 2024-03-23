@@ -16,9 +16,15 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundraising Campaigns</title>
+    <title>End Fundraising Campaigns</title>
+    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 </head>
-<body>
+
+<body class="main-body">
+
+<?php include ADMIN_END_CAMPAIGN_BASE_PATH . 'admin_header.php'; ?>
+
+<main class="main-content" style="width:100vw; border-left:4px solid #000;">
 
 <h1>Fundraising Campaigns</h1>
 
@@ -55,5 +61,6 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+</main>
 </body>
 </html>
