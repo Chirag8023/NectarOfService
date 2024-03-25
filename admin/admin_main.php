@@ -22,9 +22,9 @@ include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
                 
                 <li><a style="font-size:1.4rem; font-weight:700;">Menu</a></li>
                 <hr>
-                <li><a href="#">Campaigns</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">Donations</a></li>
+                <li><a href="http://localhost/nectarofservice/admin/pages/admin_campaigns.php">Campaigns</a></li>
+                <li><a href="http://localhost/nectarofservice/admin/pages/admin_newsletter.php">Newsletter</a></li>
+                <li><a href="http://localhost/nectarofservice/admin/pages/admin_donations.php">Donations</a></li>
             </ul>
         </nav>
     </aside>

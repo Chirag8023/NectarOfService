@@ -1,12 +1,12 @@
 <?php
-define('DONATION_SHEET_DOWNLOAD_BASE_PATH', dirname(__FILE__) . '/');
-include DONATION_SHEET_DOWNLOAD_BASE_PATH . '../../assets/scripts/auth_check.php';
+define('ADMIN_DONATIONS_BASE_PATH', dirname(__FILE__) . '/');
+include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/auth_check.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 // Include database connection configuration
-include DONATION_SHEET_DOWNLOAD_BASE_PATH . '../../assets/scripts/dbconnect.php';
+include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
 function fetchDonations($pdo, $fromDate, $toDate) {
     // Query to fetch donations within the date range
@@ -80,7 +80,7 @@ try {
 
 <body class="main-body">
 
-<?php include DONATION_SHEET_DOWNLOAD_BASE_PATH . 'admin_header.php'; ?>
+<?php include ADMIN_DONATIONS_BASE_PATH . 'admin_header.php'; ?>
 
 <main class="main-content" style="width:100vw; border-left:4px solid #000">
 

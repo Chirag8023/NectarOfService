@@ -192,3 +192,30 @@ background: #000;
     font-size: 1rem;
     font-weight: 500;
 }
+
+.admin_campaign_message_bar {
+    grid-column: 1 / -1; 
+    bottom:0rem; left:0; 
+    height:6.9vh;
+    width:100%; 
+    background-color:#ffc900; 
+    border-radius:15px; 
+    border-bottom: 4px solid black; 
+    border-right:4px solid black; 
+    border-left: 4px solid black; 
+    display:flex; 
+    flex-direction: row; 
+    align-items:center; 
+    padding-left:1rem;
+}
+
+.admin_campaign_message_bar p {
+    color:black;
+    font-weight:600;
+    border-right:2px solid black;
+    height:100%; 
+    display:flex; 
+    align-items:center; 
+    margin-right:1rem; 
+    padding-right:1rem;
+}

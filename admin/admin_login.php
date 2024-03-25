@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h3>NectarOfService</h3>
     <h2>Admin Login</h2>
     <?php if (isset($_SESSION['error_message'])) { ?>
-        <p style="color:#df0059;"><?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?></p>
+        <p style="color:#ff0037; font-weight: 600;"><?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?></p>
     <?php } ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <label for="username">Username:</label><br>
