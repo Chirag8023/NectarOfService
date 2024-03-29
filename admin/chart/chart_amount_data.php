@@ -1,17 +1,8 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
-$dbname = "mydb"; // Replace with your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+//define a base path of this file
+define('CHART_AMOUNT_DATA_BASE_PATH', dirname(__FILE__) . '/');
+include CHART_AMOUNT_DATA_BASE_PATH . '../../assets/scripts/auth_check.php';
+include CHART_AMOUNT_DATA_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
 // Construct the query to get total amount donated for each date for the last 30 days
 $query = "SELECT DATE(donation_time) AS donation_date, SUM(amount) AS total_amount 

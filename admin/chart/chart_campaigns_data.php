@@ -1,17 +1,9 @@
 <?php
-// This is where our database lives
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydb";
+//define a base path of this file
+define('CHART_CAMPAIGNS_DATA_BASE_PATH', dirname(__FILE__) . '/');
+include CHART_CAMPAIGNS_DATA_BASE_PATH . '../../assets/scripts/auth_check.php';
+include CHART_CAMPAIGNS_DATA_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
-// We're trying to talk to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// If we can't talk to the database, we stop and say there was an error
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // We're asking the database for the total amount of donations from the last 30 days
 $sql = "SELECT SUM(amount) AS total_amount FROM donations WHERE donation_time >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)";
@@ -40,14 +32,17 @@ if ($result->num_rows > 0) {
             );
         }
         $response['campaigns'] = $campaign_data;
-    } 
-} 
+        // We tell the browser we're sending it JSON data
+        header('Content-Type: application/json');
+        // We send the response
+        echo json_encode($response);
+    } else {
+        echo "Error: " . $conn->error;
+    }
+} else {
+    echo "Error: " . $conn->error;
+}
 
 // We're done talking to the database, so we say goodbye
 $conn->close();
-
-// We tell the browser we're sending it JSON data
-header('Content-Type: application/json');
-// We send the response
-echo json_encode($response);
 ?>

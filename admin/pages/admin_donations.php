@@ -1,11 +1,6 @@
 <?php
 define('ADMIN_DONATIONS_BASE_PATH', dirname(__FILE__) . '/');
 include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/auth_check.php';
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-// Include database connection configuration
 include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
 function fetchDonations($pdo, $fromDate, $toDate) {

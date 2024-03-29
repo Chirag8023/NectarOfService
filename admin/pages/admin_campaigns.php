@@ -3,10 +3,6 @@ define('ADMIN_CAMPAIGNS_BASE_PATH', dirname(__FILE__) . '/');
 include ADMIN_CAMPAIGNS_BASE_PATH .'../../assets/scripts/auth_check.php';
 include ADMIN_CAMPAIGNS_BASE_PATH .'../../assets/scripts/dbconnect.php';
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
 function handleFileUpload($file) {
     $fileName = $file['name'];
     $fileTmpName = $file['tmp_name'];

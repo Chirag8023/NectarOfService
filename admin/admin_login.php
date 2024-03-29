@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // If already logged in, redirect to admin_main.php
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['chi_username'])) {
     header("Location: http://localhost/nectarofservice/admin/admin_main.php");
     exit;
 }
@@ -26,18 +26,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify the password using password_verify function
         if (password_verify($password, $users[$username])) {
             // Set the session variable to the username
-            $_SESSION['username'] = $username;
+            $_SESSION['chi_username'] = $username;
 
             // Redirect to a secure page on successful login
             header("Location: http://localhost/nectarofservice/admin/admin_main.php");
             exit;
         } else {
             // Store error message in session
-            $_SESSION['error_message'] = "Invalid username or password!";
+            $_SESSION['chi_error_message'] = "Invalid username or password!";
         }
     } else {
         // Store error message in session
-        $_SESSION['error_message'] = "Invalid username or password!";
+        $_SESSION['chi_error_message'] = "Invalid username or password!";
     }
 
     // Redirect to the same page to prevent form resubmission
@@ -59,8 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-container">
     <h3>NectarOfService</h3>
     <h2>Admin Login</h2>
-    <?php if (isset($_SESSION['error_message'])) { ?>
-        <p style="color:#ff0037; font-weight: 600;"><?php echo $_SESSION['error_message']; unset($_SESSION['error_message']); ?></p>
+    <?php if (isset($_SESSION['chi_error_message'])) { ?>
+        <p style="color:#ff0037; font-weight: 600;"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
     <?php } ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <label for="username">Username:</label><br>
