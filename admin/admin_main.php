@@ -25,6 +25,7 @@ include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
                 <li><a href="http://localhost/nectarofservice/admin/pages/admin_campaigns.php">Campaigns</a></li>
                 <li><a href="http://localhost/nectarofservice/admin/pages/admin_newsletter.php">Newsletter</a></li>
                 <li><a href="http://localhost/nectarofservice/admin/pages/admin_donations.php">Donations</a></li>
+                <li><a href="http://localhost/nectarofservice/admin/pages/admin_social_buzz.php">Social Buzz</a></li>
             </ul>
         </nav>
     </aside>

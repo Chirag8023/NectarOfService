@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <script src="http://localhost/NectarOfService/assets/scripts/fetch_donations.js"></script>
 </head>
-<body style="background-color: #0fa958;" class='body'>
+<body style="background-image:url('http://localhost/NectarOfService/assets/images/camp_home.svg');" class='body'>
 <?php include "../assets/header.php"; ?>
     <div class="main-area">
     <h2>Ongoing Campaigns</h2>
-    <p style="color:#fff; margin-top:-10px;">*All campaigns are eligible  for 80D tax benefits.</p>
+    <p style="color:#fff; margin-top:-1.2rem; font-weight:500;">*All campaigns are eligible  for 80D tax benefits.</p>
     <br>
     <div id="campaignContent">
         <?php include '../assets/scripts/get_ongoing_campaigns.php'; ?>
     </div>
     <br>
-    <h2>Recently Closed Campaigns</h2>
+    <h2>Recent Campaigns</h2>
     <br>
     <div id="completedCampaigns">
     <?php include '../assets/scripts/get_completed_campaigns.php'; ?>

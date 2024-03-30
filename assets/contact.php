@@ -6,14 +6,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
         }
 
         /* Left content */
         .left-content {
             font-family: 'inter';
+            margin-left: 1rem;
             font-size: 30px;
             color: #000;
             margin-top:-0.5rem;
@@ -21,10 +20,11 @@
 
         
         .right-content {
-            background-color: #ffffe5;
+            background-color: #fff;
             font-size: 20px;
             font-family:'inter';
             font-weight:600;
+            margin-right:1rem;
             border-radius: 2px;
             border:3px solid black;
             box-shadow: 7px 7px  rgba(0, 0, 0);
@@ -36,7 +36,7 @@
     </style>
     <title>Contact Us</title>
 </head>
-<body style="background-color: #ffffe5;" class="body">
+<body class="body">
     <?php include 'header.php'; ?>
     <div class="grid-container" style="padding-top: 4.5rem;">
         <div class="left-content">

@@ -18,6 +18,24 @@
 	src: local('Bungee Outline'), url('http://localhost/NectarOfService/assets/fonts/BungeeOutline-Regular.ttf') format('truetype');
 }
 
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: #000;
+}
+
+	
+body::-webkit-scrollbar-thumb {
+	background: #888; 
+	border-radius:115px; /* Make the scrollbar more curved */
+}
+	
+body::-webkit-scrollbar-thumb:hover {
+	background: #999; 
+}
+
+body::-webkit-scrollbar-thumb:active {
+	background: #aaa; 
+}
 
 .main-container {
     font-family: 'inter';
@@ -181,13 +199,16 @@
 	border-left: 3px dashed black;
 	margin-left: 0;
 	padding-left:0.5rem;
-	background-color: #ffffe5;
+	background-color: #eaeaea;
 	font-display: auto;
 }
 
 .main-area h2 {
 	color: #ffffff;
-	font-size: 2rem;
+	font-size: 3rem;
+	font-family: 'bungee';
+	font-weight: 500;
+	margin: 0;
 	text-shadow: 3px 3px black;
 }
 
@@ -217,7 +238,6 @@
 .live-feed-heading {
 	color: rgb(255, 255, 255);
 	z-index: 2;
-	padding: 0.8%;
 	border-bottom: 3px solid black;
 	display: flex;
 	flex-direction: column;
@@ -250,7 +270,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: #faf2f2;
+	background-color: #eaeaea;
 	border-top: 2px solid black;
 }
 
@@ -265,7 +285,7 @@
 
 .activity-feed ul li {
 	font-weight: bold;
-	background: white;
+	background: #ffffff;
 	color: black;
 	font-size: 0.9rem;
 	padding: 1rem;
@@ -530,7 +550,7 @@ a:hover{
 
 
 .fundraiser-donation-data {
-	border: 2px solid black; border-radius:5px;margin: 0 -0.1rem 2rem -0.1rem;box-shadow: 10px 10px rgba(0, 0, 0);
+	border: 2px solid black; border-radius:5px;margin: 2rem -0.1rem 2rem -0.1rem;box-shadow: 10px 10px rgba(0, 0, 0);
                 padding: 0 1rem 0 1rem;
 				background-color: #fffdf8;
 				word-wrap: break-word;
@@ -609,9 +629,11 @@ a:hover{
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* Two equal columns */
+    grid-template-columns: 1.8fr 1fr; /* Two equal columns */
    margin-bottom: -0.12rem;
     margin-top: 4.9rem;
+	margin-right: -0.53rem;
+
 }
 
 .donation-about {
@@ -620,11 +642,18 @@ a:hover{
     word-spacing: 2px;
     line-height: 2;
 }
+.donation-about h2 {
+	font-family: 'inter';
+	font-weight: 700;
+	font-size:2rem;
+	margin:0.5rem;
+}
+
 .donation-about-image-container{
     width: 100%;
     height: 25rem;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     overflow: hidden;
 }
 .donation-about-image-container img {
@@ -642,9 +671,24 @@ a:hover{
         overflow-y: auto; /* Enable vertical scrollbar */
         max-height: 24rem; /* Set maximum height for scrollable area */
     }
+	
+.description-container::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+		
+.description-container::-webkit-scrollbar-thumb {
+		background: #555; 
+		border-radius:115px; /* Make the scrollbar more curved */
+	}
+		
+.description-container::-webkit-scrollbar-thumb:hover {
+		background: #aaa; 
+	}
 
 .donation-section {
     border-left: 3px solid #000;
+	
 }
 
 .donation-section h2 {
@@ -685,11 +729,10 @@ a:hover{
 }
 
 .donation-page-progress {
-    margin-right: -0.53rem;
-	border-bottom: 2px solid black;
-    background-color: #faf3e4;
+	border-bottom: 3px solid black;
+    background-color: #fff;
 	position: relative;
-	height: 5.45rem;	
+	height: 5rem;	
 }
 
 .donation-page-progress-bar {
@@ -744,3 +787,4 @@ a:hover{
 	height: 2.3rem;
 	margin-right: 1rem;
 }
+

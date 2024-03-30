@@ -1,7 +1,7 @@
 <?php
 include 'dbconnect.php';
 
-$completedCampaigns = "SELECT * FROM fundraising_campaigns WHERE current_amount >= goal ORDER BY id DESC LIMIT 5";
+$completedCampaigns = "SELECT * FROM fundraising_campaigns WHERE current_amount >= goal ORDER BY id DESC LIMIT 3";
 $completedResult = $conn->query($completedCampaigns);
 
 $completedCampaignData = [];

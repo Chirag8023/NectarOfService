@@ -4,7 +4,7 @@
 <body class='body'>
     <?php include 'header.php'; ?>
     <div style="
-      background-color:#C02942;
+      background-image:url(http://localhost/NectarOfService/assets/images/landing.svg);
 margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px solid black; margin-bottom: 5%;">
     <div class="main-container">
         <!-- Left section -->

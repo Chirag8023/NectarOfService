@@ -2,8 +2,7 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <title>About Us</title>
 </head>
-<body class="body" style="background-color: #ffffe5;
-">
+<body class="body">
     <?php include 'header.php'; ?>
     <div style="
     margin-top:5rem; font-family:'inter'; font-size:23px; padding:3rem; color:#000;">
