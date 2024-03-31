@@ -21,22 +21,15 @@
             font-size: 3rem;
             font-weight: 500;
             color: #fff;
-            margin-bottom: -1.5rem;
-            margin-top:-1rem;
+            margin-top:0;
+            margin-bottom:5rem;
         }
 
-        #social-buzz-top p {
-            font-family: 'inter';
-            font-size: 1rem;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 23rem;
-        }
 
         #tweet-popup {
             background-color: #560090;
             border: 1px solid #000;
-            border-radius: 3px;
+            border-radius: 1px;
             width: 700px;
             padding: 1.3rem;
             box-shadow: 14px 14px #000;
@@ -54,7 +47,7 @@
             border: 2px solid #0000;
             background-color: #140021;
             color: #fff;
-            border-radius: 2px;
+            border-radius: 1px;
             font-size: 1.5rem;
             resize: none;
             outline: none;
@@ -93,6 +86,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 10px;
+            margin-bottom:-3rem;
         }
 
 </style>
@@ -101,21 +95,12 @@
     <div id="social-buzz-top">
         <div id="composer-container">
             <h1>BE THE VOICE, EVERYONE NEED TO HEAR</h1>
-            <p>Share the word in community</p>
                 
-        </div>
-    </div>
-    <div id="tweet-popup">
-        <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
-            <div style="display:flex; justify-content:space-between; align-items:baseline;">
-                <span id="char-count">260</span>
-                <button id="tweet-button">Tweet</button>
-            </div>
-    </div>
+        </div>   
 
-    <h2>Embedded Tweets Grid</h2>
+    <h2 style="text-align:center; color:#fff;">Testimonials</h2>
     <div class="social-buzz-grid-container">
-        <?php /*
+        <?php 
         // Load JSON data from file
         $data = json_decode(file_get_contents("tweets.json"), true);
 
@@ -156,9 +141,18 @@
             $tweet_id = end($parts);
             return $tweet_id;
         }
-        */?>
+        ?>
+    </div>
     </div>
 
+    <h1 style="text-align:center;">s</h1>
+    <div id="tweet-popup">
+        <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                <span id="char-count">260</span>
+                <button id="tweet-button">Tweet</button>
+            </div>
+    </div>
     <script src="http://localhost/NectarOfService/social_buzz/social_buzz_script.js"></script>
 </body>
 <?php include '../assets/footer.php'; ?>

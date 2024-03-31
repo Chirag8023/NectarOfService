@@ -25,7 +25,7 @@
             font-family:'inter';
             font-weight:600;
             margin-right:1rem;
-            border-radius: 2px;
+            border-radius: 1px;
             border:3px solid black;
             box-shadow: 7px 7px  rgba(0, 0, 0);
             padding: 20px;

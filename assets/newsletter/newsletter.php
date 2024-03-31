@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
 <div class="newsletter">
     <div><h2>Join<br>Newsletter</h2></div>
     <div>
-    <p>Get updates about how your contributions are making an impact!</p>
+    <p>Get updates about how your contributions are making impact!</p>
     <?php if (isset($_SESSION['chi_success_message'])) { ?>
         <p style="color: rgb(255, 255, 255);"><?php echo $_SESSION['chi_success_message']; ?></p>
         <script>
