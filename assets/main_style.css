@@ -18,22 +18,23 @@
 	src: local('Bungee Outline'), url('http://localhost/NectarOfService/assets/fonts/BungeeOutline-Regular.ttf') format('truetype');
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, textarea::-webkit-scrollbar {
 	width: 10px;
 	background-color: #000;
 }
 
 	
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
 	background: #888; 
 	border-radius:1px; /* Make the scrollbar more curved */
 }
 	
-body::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover  {
 	background: #999; 
+	cursor:initial;
 }
 
-body::-webkit-scrollbar-thumb:active {
+body::-webkit-scrollbar-thumb:active, textarea::-webkit-scrollbar-thumb:active {
 	background: #aaa; 
 }
 

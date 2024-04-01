@@ -82,7 +82,7 @@
             color: #ddd;
             font-size: 1.2rem;
             margin-top: 6px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         #tweet-button {
@@ -109,11 +109,11 @@
             <div id="tweets-container"></div>
     </div>
     <div id="social-buzz-middle">
-        <h1>Use <span style="color:#9900ff">#NectarOfService</span> on socials to support the casuse</h1>
+        <h1>Use <span style="color:#9900ff">#NectarOfService</span> on socials to support the cause</h1>
     </div>
 
     <div id="social-buzz-bottom">
-        <h1 style="text-align:center;">something you want to share with us?<br>better share it with the world!</h1>
+        <h1 style="text-align:center;">something you want to share with us?<br>share it with the world!</h1>
         <div id="tweet-popup">
             <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
                 <div style="display:flex; justify-content:space-between; align-items:baseline;">
@@ -122,6 +122,6 @@
                 </div>
         </div>
     </div>
-    <script src="http://localhost/NectarOfService/social_buzz/social_buzz_script.js"></script>
+    <script src="http://localhost/NectarOfService/assets/scripts/social_buzz_script.js"></script>
 </body>
 <?php include '../assets/footer.php'; ?>
