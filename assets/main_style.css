@@ -570,8 +570,6 @@ a:hover{
 }
 
 .newsletter {
-	
-	border: 1px solid #000;
 	background-image: url('http://localhost/NectarOfService/assets/images/nlbg.svg');
 	text-align: center;
 	align-items:center;
@@ -645,7 +643,7 @@ a:hover{
     grid-template-columns: 1.8fr 1fr; /* Two equal columns */
    margin-bottom: -0.12rem;
     margin-top: 4.9rem;
-	margin-right: -0.53rem;
+	margin-right: -0.5rem;
 
 }
 

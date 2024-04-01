@@ -26,3 +26,16 @@ document.getElementById('tweet-text').addEventListener('input', updateCharCount)
 
 // Update character count initially
 updateCharCount();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('tweets.json')
+        .then(response => response.json())
+        .then(data => {
+            const tweetsContainer = document.getElementById('tweets-container');
+            for (const key in data) {
+                const tweetId = data[key].split('/').pop();
+                tweetsContainer.innerHTML += `<blockquote class="twitter-tweet" data-cards="hidden"><a href="https://twitter.com/user/status/${tweetId}"></a></blockquote>`;
+            }
+        });
+});

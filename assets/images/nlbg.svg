@@ -1,7 +1,7 @@
 <svg id="visual" viewBox="0 0 1000 200" width="1000" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <rect width="1000" height="200" fill="#078846"></rect>
 <g>
-<g transform="translate(15 15)">
+<g transform="translate(16 16)">
     <path d="M0 0L1000 0L1000 200L0 200Z" stroke="#000" fill="none" stroke-width="7.5"></path>
 </g>
 </g>
