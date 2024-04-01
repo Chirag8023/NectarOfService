@@ -78,14 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Fundraising Campaigns</title>
     <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
-</head>
 
 <body class="main-body">
 
@@ -147,4 +141,3 @@ if (isset($_SESSION['chi_success'])) {
 
 
 </body>
-</html>

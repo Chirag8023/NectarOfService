@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dummy UPI Interface</title>
 <style>
 body {
@@ -61,7 +56,6 @@ footer {
   width: 100%;
 }
 </style>
-</head>
 <body>
 <header>
   <h1>Dummy UPI Interface</h1>
@@ -104,4 +98,3 @@ function processPayment() {
   <p>&copy; 2024 Dummy UPI Interface by Chirag Arora.</p>
 </footer>
 </body>
-</html>

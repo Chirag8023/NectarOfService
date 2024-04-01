@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dummy Credit Card Interface</title>
 <style>
   body {
@@ -78,7 +73,6 @@ input[type="submit"]:hover {
   background-color: #005a93;
 }
 </style>
-</head>
 <body>
 <img id="logo"  src="http://localhost/nectarofservice/assets/images/paypal logo.png" alt="Paypal Logo">
 <h2>Dummy Paypal</h2>
@@ -117,4 +111,3 @@ function processPayment() {
 
 </script>
 </body>
-</html>

@@ -1,4 +1,3 @@
-<head>
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <style>
         /* Grid container */
@@ -35,7 +34,6 @@
                
     </style>
     <title>Contact Us</title>
-</head>
 <body class="body">
     <?php include 'header.php'; ?>
     <div class="grid-container" style="padding-top: 4.5rem;">

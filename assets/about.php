@@ -1,7 +1,5 @@
-<head>
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <title>About Us</title>
-</head>
 <body class="body">
     <?php include 'header.php'; ?>
     <div style="

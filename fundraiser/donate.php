@@ -31,12 +31,8 @@ function generate_csrf_token() {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
     <title><?php echo $campaign_name; ?></title>
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
-</head>
 <body class='body' style="padding-left: 0;">
     <?php include "../assets/header.php";?>
 
@@ -96,4 +92,3 @@ function generate_csrf_token() {
     <script src="http://localhost/NectarOfService/assets/scripts/donate_page_script.js"></script>
 
 </body>
-</html>

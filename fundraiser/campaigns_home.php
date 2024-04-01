@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marquee Heading</title>
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <script src="http://localhost/NectarOfService/assets/scripts/fetch_donations.js"></script>
-</head>
 <body style="background-image:url('http://localhost/NectarOfService/assets/images/camp_home.svg');" class='body'>
 <?php include "../assets/header.php"; ?>
     <div class="main-area">
@@ -36,4 +30,3 @@
 </div>
 
 </body>
-</html>

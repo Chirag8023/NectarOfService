@@ -60,15 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compose Newsletter</title>
     <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
-</head>
 
 <body class="main-body">
 
@@ -92,4 +85,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </main>
 </body>
-</html>

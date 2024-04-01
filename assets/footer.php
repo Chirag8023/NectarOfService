@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 
     <div class="footer">

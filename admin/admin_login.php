@@ -47,14 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="admin_style.css">
-</head>
+    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 <body class="admin-login">
     <div class="login-container">
     <h3>NectarOfService</h3>
@@ -71,4 +65,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
     </div>
 </body>
-</html>

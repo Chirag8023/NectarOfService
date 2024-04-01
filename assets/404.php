@@ -1,7 +1,5 @@
-<head>
     <title>404 Not Found</title>
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
-</head>
 <body class="body">
 <?php include 'header.php'; ?>
 <div style="margin-top:7rem; text-align:center; font-size:30px;">

@@ -64,14 +64,8 @@ try {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Records Download</title>
     <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
-</head>
 
 <body class="main-body">
 
@@ -94,5 +88,4 @@ try {
 
 </main>
 </body>
-</html>
 
