@@ -13,7 +13,23 @@
             min-height: 100vh;
             border-bottom:4px solid #000;
         }
+        #social-buzz-top h1 {
+            font-family: 'bungee';
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #fff;
+            margin-top:0;
+            margin-bottom:1rem;
+        }
 
+        #social-buzz-top h2{
+            text-align:center;
+            color:#e5bfff;
+            margin-bottom:16rem; 
+            font-weight:700; 
+            font-size:2rem; 
+        }
         #tweets-container {
             padding: 0 100px;
             display: grid;
@@ -22,24 +38,17 @@
             margin-bottom: 6rem;
         }
 
-        #composer-container {
-            display:flex; 
-            flex-direction:column;
-            align-items:center;
-        }
-        #social-buzz-top h1 {
-            font-family: 'bungee';
-            text-align: center;
-            font-size: 3rem;
-            font-weight: 500;
-            color: #fff;
-            margin-top:0;
-            margin-bottom:12rem;
+        #social-buzz-middle h1{
+            background-color: #f092dd77;
+            text-align: right;
+            padding:2rem 1rem;
         }
 
+        #social-buzz-bottom{
+            margin: 5rem;
+        }
         #tweet-popup {
             background-color: #560090;
-            border: 1px solid #000;
             border-radius: 1px;
             width: 700px;
             padding: 1.3rem;
@@ -70,14 +79,14 @@
         }
 
         #char-count {
-            color: #888;
+            color: #ddd;
             font-size: 1.2rem;
             margin-top: 6px;
             font-weight: 500;
         }
 
         #tweet-button {
-            background-color: #9900ff;
+            background-color: #ba58fc;
             color: #fff;
             font-weight: 600;
             border: none;
@@ -95,23 +104,23 @@
 <body class="body" >
     <?php include '../assets/header.php'; ?>
     <div id="social-buzz-top">
-        <div id="composer-container">
             <h1>BE THE VOICE, EVERYONE NEEDS TO HEAR</h1>
-                
-        </div>   
-
-    <h2 style="text-align:center;text-shadow:4px 4px #000 ;color:#fff;margin-bottom:4rem; font-weight:800; font-size:2rem; ">BECAUSE YOUR WORDS RESONATE LOUDER</h2>
-
-<div id="tweets-container"></div>
+            <h2>because your words resonate louder</h2>
+            <div id="tweets-container"></div>
+    </div>
+    <div id="social-buzz-middle">
+        <h1>Use <span style="color:#9900ff">#NectarOfService</span> on socials to support the casuse</h1>
     </div>
 
-    <h1 style="text-align:center;">s</h1>
-    <div id="tweet-popup">
-        <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
-            <div style="display:flex; justify-content:space-between; align-items:baseline;">
-                <span id="char-count">260</span>
-                <button id="tweet-button">Tweet</button>
-            </div>
+    <div id="social-buzz-bottom">
+        <h1 style="text-align:center;">something you want to share with us?<br>better share it with the world!</h1>
+        <div id="tweet-popup">
+            <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
+                <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                    <span id="char-count">260</span>
+                    <button id="tweet-button">Tweet</button>
+                </div>
+        </div>
     </div>
     <script src="http://localhost/NectarOfService/social_buzz/social_buzz_script.js"></script>
 </body>
