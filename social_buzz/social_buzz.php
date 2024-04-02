@@ -121,7 +121,7 @@
     <div id="social-buzz-bottom">
         <h1 style="text-align:center;">have something to share with us?<br>share it with the world!</h1>
         <div id="tweet-popup">
-            <textarea id="tweet-text" placeholder="Share your experience..." rows="4" maxlength="260"></textarea>
+            <textarea id="tweet-text" placeholder="Express your thoughts..." rows="4" maxlength="260"></textarea>
             <div style="display:flex; justify-content:space-between; align-items:baseline;">
                 <span id="char-count">260</span>
                 <button id="tweet-button">Tweet</button>
