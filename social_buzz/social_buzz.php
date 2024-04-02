@@ -4,6 +4,9 @@
     crossorigin>
 <link rel="preload" href="/NectarOfService/assets/fonts/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf"
     crossorigin>
+<link rel="preload" href="/NectarOfService/assets/fonts/Bungee-Regular.ttf" as="font" type="font/ttf"
+    crossorigin>
+
 <title>Social Buzz</title>
 <style>
 #social-buzz-top {
@@ -110,7 +113,7 @@
 <body class="body">
     <?php include '../assets/header.php'; ?>
     <div id="social-buzz-top">
-        <h1>BE THE VOICE, EVERYONE NEEDS TO HEAR</h1>
+        <h1>be the voice, that can inspire</h1>
         <h2>because your words resonate louder</h2>
         <div id="tweets-container"></div>
     </div>
