@@ -122,7 +122,7 @@
     </div>
 
     <div id="social-buzz-bottom">
-        <h1 style="text-align:center;">have something to share with us?<br>share it with the everyone!</h1>
+        <h1 style="text-align:center;">have something to share with us?<br>share it with everyone!</h1>
         <div id="tweet-popup">
             <textarea id="tweet-text" placeholder="Express your thoughts..." rows="4" maxlength="260"></textarea>
             <div style="display:flex; justify-content:space-between; align-items:baseline;">
