@@ -46,31 +46,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-    <title>URL Updater</title>
-    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+<title>URL Updater</title>
+<link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">
 
-<?php include ADMIN_SOCIAL_BUZZ_BASE_PATH . 'admin_header.php'; ?>
+    <?php include ADMIN_SOCIAL_BUZZ_BASE_PATH . 'admin_header.php'; ?>
 
-<main class="main-content" style="width:100vw; border-left:4px solid #000">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
-    <h2>Update URL for ID</h2>
-    <form method="post">
-        ID:
-        <input type="number" name="id" min="1" max="6" required><br><br>
-        New URL:
-        <input type="text" name="new_url" required><br><br>
-        <input type="submit" name="submit" value="Update">
-    </form>
-    <?php if(isset($_SESSION['success'])): ?>
+        <h2>Update URL for ID</h2>
+        <form method="post">
+            ID:
+            <input type="number" name="id" min="1" max="6" required><br><br>
+            New URL:
+            <input type="text" name="new_url" required><br><br>
+            <input type="submit" name="submit" value="Update">
+        </form>
+        <?php if(isset($_SESSION['success'])): ?>
         <p style="color:green;"><?php echo $_SESSION['success']; ?></p>
         <?php unset($_SESSION['success']); ?>
-    <?php endif; ?>
-    <?php if(isset($_SESSION['error'])): ?>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['error'])): ?>
         <p style="color:red;"><?php echo $_SESSION['error']; ?></p>
         <?php unset($_SESSION['error']); ?>
-    <?php endif; ?>
+        <?php endif; ?>
 
-</main>
+    </main>
 </body>

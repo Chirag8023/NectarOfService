@@ -34,8 +34,8 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->Cell(0, 10, 'Impact of Your Donation:', 0, 1);
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(0, 10, 'Your contribution will support our efforts to provide essential services and uplift communities', 0, 1);
-    $pdf->Cell(0, 10, 'including but not limited to providing food assistance, educational opportunities,', 0, 1);
-    $pdf->Cell(0, 10, 'and resources for those in need.', 0, 1);
+    $pdf->Cell(0, 10, 'including but not limited to providing food assistance, spritual opportunities,', 0, 1);
+    $pdf->Cell(0, 10, 'and educational resources for those in need.', 0, 1);
 
 
     $pdf->SetFont('Arial', 'B', 18);

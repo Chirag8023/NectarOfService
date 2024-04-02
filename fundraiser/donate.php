@@ -31,8 +31,9 @@ function generate_csrf_token() {
 }
 ?>
 
-    <title><?php echo $campaign_name; ?></title>
-    <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
+<title><?php echo $campaign_name; ?></title>
+<link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
+
 <body class='body' style="padding-left: 0;">
     <?php include "../assets/header.php";?>
 
@@ -50,10 +51,13 @@ function generate_csrf_token() {
         <div class="donation-section">
             <div class="donation-page-progress">
                 <div class="donation-page-progress-bar" style="width: <?php echo min(100, $percentage); ?>%;"></div>
-                <div class="donation-page-progress-text"><?php echo "Raised: ₹" .round($row['current_amount']).'/-<br>Goal: ₹'.round($row['goal']).'/-'; ?></div>
+                <div class="donation-page-progress-text">
+                    <?php echo "Raised: ₹" .round($row['current_amount']).'/-<br>Goal: ₹'.round($row['goal']).'/-'; ?>
+                </div>
             </div>
             <h2>Donation Form</h2>
-            <form id="donationForm" method="post" action="http://localhost/NectarOfService/assets/scripts/proceed_donation.php">
+            <form id="donationForm" method="post"
+                action="http://localhost/NectarOfService/assets/scripts/proceed_donation.php">
                 <label for="donor_name">Donor Name:</label>
                 <input type="text" name="donor_name" id="donor_name" required>
 
@@ -77,14 +81,20 @@ function generate_csrf_token() {
                 <input type="hidden" name="campaign_id" value="<?php echo $_GET['campaign_id']; ?>">
                 <input type="button" value="Donate" class="header-button" id="donateButton">
             </form>
-                <div class="share-buttons">
-                    <a href="https://twitter.com/intent/tweet?text=Donate in this awesome campaign on NectarOfService Platform:%0A<?php echo $campaign_name?>%0A%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A[DEMO PURPOSE LINK ONLY!]" target="_blank">
-                        <button style="background-color:#08a0e9;"><img src="http://localhost/nectarofservice/assets/images/twitter_logo.png">Share on Twitter</button>
-                    </a>
-                    <a href="https://web.whatsapp.com/send?text=Hello,%0AI hope this message finds you well. I wanted to share with you an important opportunity to contribute to a meaningful cause. Please take a moment to explore this campaign: <?php echo $campaign_name;?> on NectarofService platform.%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A%0A*Your support would mean a lot to them as they strive to make a positive impact.*%0A *[DEMO PURPOSE LINK ONLY!]*" target="_blank">
-                        <button style="background-color:#25d366;"><img src="http://localhost/nectarofservice/assets/images/whatsapp_logo.png" style="filter: brightness(0) saturate(100%) invert(1);">Share on WhatsApp</button>
-                    </a>
-                </div>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=Donate in this awesome campaign on NectarOfService Platform:%0A<?php echo $campaign_name?>%0A%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A[DEMO PURPOSE LINK ONLY!]"
+                    target="_blank">
+                    <button style="background-color:#08a0e9;"><img
+                            src="http://localhost/nectarofservice/assets/images/twitter_logo.png">Share on
+                        Twitter</button>
+                </a>
+                <a href="https://web.whatsapp.com/send?text=Hello,%0AI hope this message finds you well. I wanted to share with you an important opportunity to contribute to a meaningful cause. Please take a moment to explore this campaign: <?php echo $campaign_name;?> on NectarofService platform.%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A%0A*Your support would mean a lot to them as they strive to make a positive impact.*%0A *[DEMO PURPOSE LINK ONLY!]*"
+                    target="_blank">
+                    <button style="background-color:#25d366;"><img
+                            src="http://localhost/nectarofservice/assets/images/whatsapp_logo.png"
+                            style="filter: brightness(0) saturate(100%) invert(1);">Share on WhatsApp</button>
+                </a>
+            </div>
         </div>
     </div>
 

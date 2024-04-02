@@ -47,21 +47,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-    <title>Login</title>
-    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+<title>Login</title>
+<link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+
 <body class="admin-login">
     <div class="login-container">
-    <h3>NectarOfService</h3>
-    <h2>Admin Login</h2>
-    <?php if (isset($_SESSION['chi_error_message'])) { ?>
-        <p style="color:#ff0037; font-weight: 600;"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
-    <?php } ?>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Login</button>
-    </form>
+        <h3>NectarOfService</h3>
+        <h2>Admin Login</h2>
+        <?php if (isset($_SESSION['chi_error_message'])) { ?>
+        <p style="color:#ff0037; font-weight: 600;">
+            <?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
+        <?php } ?>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
     </div>
 </body>

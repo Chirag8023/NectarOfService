@@ -78,34 +78,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 }
 ?>
 
-    <title>Manage Fundraising Campaigns</title>
-    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+<title>Manage Fundraising Campaigns</title>
+<link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">
 
-<?php include ADMIN_CAMPAIGNS_BASE_PATH . 'admin_header.php'; ?>
+    <?php include ADMIN_CAMPAIGNS_BASE_PATH . 'admin_header.php'; ?>
 
-<main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
 
-<h2>Add New Campaign</h2>
-<form method="post" enctype="multipart/form-data">
-    <input type="hidden" name="action" value="add">
-    <label for="title">Title:</label>
-    <input type="text" name="title" id="title" required><br><br>
-    <label for="description">Description:</label>
-    <textarea name="description" id="description" required></textarea><br><br>
-    <label for="goal">Goal:</label>
-    <input type="number" name="goal" id="goal" min="1" required><br><br>
-    <label for="image">Image:</label>
-    <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/webp" required><br><br>
-    <input type="submit" value="Create Campaign">
-</form>
+        <h2>Add New Campaign</h2>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="add">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required><br><br>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" required></textarea><br><br>
+            <label for="goal">Goal:</label>
+            <input type="number" name="goal" id="goal" min="1" required><br><br>
+            <label for="image">Image:</label>
+            <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/webp" required><br><br>
+            <input type="submit" value="Create Campaign">
+        </form>
 
-<hr>
+        <hr>
 
-<h1>End Fundraising Campaigns</h1>
+        <h1>End Fundraising Campaigns</h1>
 
-<?php
+        <?php
 $sql = "SELECT id, title, created_at FROM fundraising_campaigns WHERE goal > current_amount";
 $result = $conn->query($sql);
 
@@ -123,11 +123,11 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-</main>
+    </main>
 
-<div class="admin_campaign_message_bar"> 
-<p>Message:</p>
-<?php
+    <div class="admin_campaign_message_bar">
+        <p>Message:</p>
+        <?php
 if (isset($_SESSION['chi_error'])) {
     echo '<div style="color:#ff0037; font-weight:600;">' . $_SESSION['chi_error'] . '</div>';
     unset($_SESSION['chi_error']);
@@ -136,8 +136,8 @@ if (isset($_SESSION['chi_success'])) {
     echo '<div style="color:green;">' . $_SESSION['chi_success'] . '</div>';
     unset($_SESSION['chi_success']);
 }
-?>   
-</div>
+?>
+    </div>
 
 
 </body>

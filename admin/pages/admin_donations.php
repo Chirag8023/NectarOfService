@@ -64,28 +64,27 @@ try {
 }
 ?>
 
-    <title>Donation Records Download</title>
-    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+<title>Donation Records Download</title>
+<link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">
 
-<?php include ADMIN_DONATIONS_BASE_PATH . 'admin_header.php'; ?>
+    <?php include ADMIN_DONATIONS_BASE_PATH . 'admin_header.php'; ?>
 
-<main class="main-content" style="width:100vw; border-left:4px solid #000">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
-    <h2>Donation Records</h2>
-    <p>Download records within date range.</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="from_date">From Date:</label>
-        <input type="date" id="from_date" name="from_date" required>
-        <label for="to_date">To Date:</label>
-        <input type="date" id="to_date" name="to_date" required>
-        <button type="submit" name="submit">Generate CSV</button>
-        <?php if (isset($_SESSION['chi_error'])) { ?>
-        <p style="color:red"><?php echo $_SESSION['chi_error']; unset($_SESSION['chi_error']); ?></p>
-        <?php } ?>
-    </form>
+        <h2>Donation Records</h2>
+        <p>Download records within date range.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <label for="from_date">From Date:</label>
+            <input type="date" id="from_date" name="from_date" required>
+            <label for="to_date">To Date:</label>
+            <input type="date" id="to_date" name="to_date" required>
+            <button type="submit" name="submit">Generate CSV</button>
+            <?php if (isset($_SESSION['chi_error'])) { ?>
+            <p style="color:red"><?php echo $_SESSION['chi_error']; unset($_SESSION['chi_error']); ?></p>
+            <?php } ?>
+        </form>
 
-</main>
+    </main>
 </body>
-

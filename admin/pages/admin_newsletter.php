@@ -60,28 +60,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-    <title>Compose Newsletter</title>
-    <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+<title>Compose Newsletter</title>
+<link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">
 
-<?php include ADMIN_NEWSLETTER_BASE_PATH . 'admin_header.php'; ?>
+    <?php include ADMIN_NEWSLETTER_BASE_PATH . 'admin_header.php'; ?>
 
-<main class="main-content" style="width:100vw; border-left:4px solid #000">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
-<h2>Compose Newsletter</h2>
-<form method="post">
-    <textarea name="newsletter_content" rows="10" cols="100" required></textarea>
-    <br>
-    <input type="submit" value="Send Newsletter">
-    <br>
-    <?php if(isset($_SESSION['chi_success_message'])) { ?>
-        <p style="color:green"><?php echo $_SESSION['chi_success_message']; unset($_SESSION['chi_success_message']); ?></p>
-    <?php } ?>
-    <?php if(isset($_SESSION['chi_error_message'])) { ?>
-        <p style="color:red"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
-    <?php } ?>
-</form>
+        <h2>Compose Newsletter</h2>
+        <form method="post">
+            <textarea name="newsletter_content" rows="10" cols="100" required></textarea>
+            <br>
+            <input type="submit" value="Send Newsletter">
+            <br>
+            <?php if(isset($_SESSION['chi_success_message'])) { ?>
+            <p style="color:green">
+                <?php echo $_SESSION['chi_success_message']; unset($_SESSION['chi_success_message']); ?></p>
+            <?php } ?>
+            <?php if(isset($_SESSION['chi_error_message'])) { ?>
+            <p style="color:red"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?>
+            </p>
+            <?php } ?>
+        </form>
 
-</main>
+    </main>
 </body>
