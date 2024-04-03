@@ -10,7 +10,7 @@ if(!isset($_SESSION['chi_receipt_number'])) {
 ?>
 
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
-
+<title> Thank You </title>
 <style>
 .container {
     width: 60%;

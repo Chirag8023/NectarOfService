@@ -1,4 +1,4 @@
-<title>Dummy Credit Card Interface</title>
+<title>Dummy Paypal Interface</title>
 <style>
 body {
     background-color: #0070ba;

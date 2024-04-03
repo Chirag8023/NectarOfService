@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<title>Compose Newsletter</title>
+<title>Admin Newsletter</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">

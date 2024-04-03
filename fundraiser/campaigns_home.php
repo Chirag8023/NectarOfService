@@ -1,4 +1,4 @@
-    <title>Marquee Heading</title>
+    <title>Campaigns</title>
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <script src="http://localhost/NectarOfService/assets/scripts/fetch_donations.js"></script>
 

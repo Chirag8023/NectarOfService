@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 }
 ?>
 
-<title>Manage Fundraising Campaigns</title>
+<title>Admin Campaigns</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">

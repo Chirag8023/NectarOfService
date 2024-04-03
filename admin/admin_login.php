@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<title>Login</title>
+<title>Admin Login</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="admin-login">
