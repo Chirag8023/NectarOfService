@@ -11,37 +11,11 @@ if(!isset($_SESSION['chi_receipt_number'])) {
 
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <title> Thank You </title>
-<style>
-.container {
-    width: 60%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: left;
-    margin-top: 6rem;
-    font-size: 21px;
-    font-family: 'Cormorant Garamond';
-    font-weight: 600;
-}
-
-
-.container button {
-    color: #ffffff;
-    font-size: 20px;
-    padding: 1rem 19rem;
-    background-color: #007BFF;
-}
-
-.container a {
-    color: #000;
-}
-</style>
 
 <?php include '../assets/header.php'; ?>
 
 <body class="body">
-    <div class="container">
+    <div class="thank-you-container">
 
         <h1>
             Thank you for your donation

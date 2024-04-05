@@ -253,7 +253,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	position: fixed;
 	top: 4.9rem;
 	right: 0;
-	background: #C02942;
+	background: #04733a;
 	width: 20%;
 	border-left: 3px solid black;
 	box-sizing: border-box;
@@ -927,4 +927,30 @@ a:hover {
 
 #social-buzz-bottom #tweet-button:hover {
     background-color: #000;
+}
+/* Thank you page */
+
+.thank-you-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    margin-top: 6rem;
+    font-size: 21px;
+    font-family: 'Cormorant Garamond';
+    font-weight: 600;
+}
+
+
+.thank-you-container button {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 1rem 19rem;
+    background-color: #007BFF;
+}
+
+.thank-you-container a {
+    color: #000;
 }
