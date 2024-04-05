@@ -816,3 +816,115 @@ a:hover {
 	height: 2.3rem;
 	margin-right: 1rem;
 }
+
+/* Social Buzz Section */
+
+#social-buzz-top {
+    margin-top: 4rem;
+    padding-top: 3.7rem;
+    margin-left: -1rem;
+    margin-right: -0.5rem;
+    background-image: url('http://localhost/NectarOfService/assets/images/blob.svg');
+    min-height: 100vh;
+    border-bottom: 4px solid #000;
+}
+
+#social-buzz-top h1 {
+    font-family: 'bungee';
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+	position: absolute;
+	top:100;
+	left:10%;
+}
+
+@media only screen and (max-width: 1200px) {
+	#social-buzz-top h1 {
+	  font-size: 3rem; /* Font size when screen width is 1000px or more */
+	}
+  }
+
+#social-buzz-top h2 {
+    text-align: center;
+    color: #e5bfff;
+    margin-bottom: 14rem;
+    font-weight: 700;
+    font-size: 2rem;
+	margin-top: 8rem;
+}
+
+#social-buzz-top #tweets-container {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 6rem;
+}
+
+#social-buzz-middle h1 {
+    background-color: #f092dd77;
+    text-align: right;
+    padding: 2rem 1rem;
+}
+
+#social-buzz-bottom {
+    margin: 10rem;
+}
+
+#social-buzz-bottom #tweet-popup {
+    background-color: #560090;
+    border-radius: 1px;
+    width: 700px;
+    padding: 1.3rem;
+    box-shadow: 14px 14px #000;
+    margin-bottom: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#social-buzz-bottom #tweet-text {
+    font-family: 'Inter';
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #0000;
+    background-color: #140021;
+    color: #fff;
+    border-radius: 1px;
+    font-size: 1.5rem;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#social-buzz-bottom #tweet-text:focus {
+    border-color: #fff;
+}
+
+#social-buzz-bottom #char-count {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+#social-buzz-bottom #tweet-button {
+    background-color: #ba58fc;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#social-buzz-bottom #tweet-button:hover {
+    background-color: #000;
+}

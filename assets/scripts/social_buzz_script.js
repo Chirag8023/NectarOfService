@@ -44,3 +44,47 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+
+
+    // Define an array of words
+    const wordsArray = ["motivate", "encourage", "inspire"];
+
+    // Get references to the header and the word span
+    const header = document.getElementById("inspireHeader");
+    const wordSpan = document.getElementById("inspireWord");
+    
+    // Initialize index for the array
+    let currentIndex = 0;
+    let currentCharIndex = 0;
+    let typingSpeed = 110; // Adjust typing speed (milliseconds per character)
+    
+    // Function to update the word with typing effect
+    function updateWordWithTyping() {
+        const currentWord = wordsArray[currentIndex];
+        if (currentCharIndex < currentWord.length) {
+            // Add a character to the word
+            wordSpan.textContent += currentWord.charAt(currentCharIndex);
+            currentCharIndex++;
+            setTimeout(updateWordWithTyping, typingSpeed);
+        } else {
+            // Typing complete, reset char index and move to next word
+            currentCharIndex = 0;
+            currentIndex = (currentIndex + 1) % wordsArray.length;
+            setTimeout(eraseWordWithTyping, 1500); // Wait for 1.5 second before erasing
+        }
+    }
+    
+    // Function to erase the word with typing effect
+    function eraseWordWithTyping() {
+        if (wordSpan.textContent.length > 0) {
+            // Remove a character from the word
+            wordSpan.textContent = wordSpan.textContent.slice(0, -1);
+            setTimeout(eraseWordWithTyping, typingSpeed / 1.2); // Erase faster
+        } else {
+            // Erasing complete, start typing next word
+            setTimeout(updateWordWithTyping, 1000); // Wait for 1 seconds before typing next word
+        }
+    }
+    
+    // Start the typing effect
+    updateWordWithTyping();
