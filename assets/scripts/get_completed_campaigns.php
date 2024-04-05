@@ -8,7 +8,7 @@ $completedCampaignData = [];
 
 if ($completedResult->num_rows > 0) {
     while($row = $completedResult->fetch_assoc()) {
-        // Store campaign data in an array
+        // Storing campaign data in an array
         $campaign = [
             'title' => $row["title"],
             'description' => strlen($row['description']) > 200 ? substr($row['description'], 0, 200) . '...' : $row['description'],

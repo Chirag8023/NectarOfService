@@ -1,28 +1,27 @@
 // Function to fetch data from PHP scripts and create charts
 async function fetchDataAndCreateCharts() {
-  // Fetch total amount donated by date
+  // Fetch total amount donated per day in last 30 days
   const totalAmountResponse = await fetch(
     "http://localhost/nectarofservice/admin/chart/chart_amount_data.php"
   );
   const totalAmountData = await totalAmountResponse.json();
 
-  // Fetch donations by campaign lst 30 days
+  // Fetch donations by campaigns in last 30 days
   const campaignsResponse = await fetch(
     "http://localhost/nectarofservice/admin/chart/chart_campaigns_data.php"
   );
   const campaignsData = await campaignsResponse.json();
 
-  // Fetch people donated by date
+  // Fetch people donated by date in last 30 days
   const donationsByDateResponse = await fetch(
     "http://localhost/nectarofservice/admin/chart/chart_people_data.php"
   );
   const donationsByDateData = await donationsByDateResponse.json();
 
-  // Chart for total amount donated
+  // Chart for total amount donated per day in last 30 days
   const totalAmountCtx = document
     .getElementById("totalAmountChart")
     .getContext("2d");
-  // Chart for total amount donated
   const totalAmountLabels = totalAmountData.map((item) => item.donation_date);
   const totalAmountValues = totalAmountData.map((item) => item.total_amount);
   new Chart(totalAmountCtx, {
@@ -68,7 +67,7 @@ async function fetchDataAndCreateCharts() {
     },
   });
 
-  // Chart for total contributors by date
+  // Chart for total contributors per day in last 30 days
   const donationsByDateCtx = document
     .getElementById("donationsByDateChart")
     .getContext("2d");
@@ -115,7 +114,7 @@ async function fetchDataAndCreateCharts() {
     },
   });
 
-  // Chart for total donations by campaign
+  // Chart for total donations by campaigns in last 30 days
   const campaignsCtx = document
     .getElementById("campaignsChart")
     .getContext("2d");
@@ -170,12 +169,13 @@ async function fetchDataAndCreateCharts() {
 // Call the function to fetch data and create charts when the page loads
 window.onload = fetchDataAndCreateCharts;
 
+//function to show only selected chart
 function show(id) {
-  // Hide all sections
+  // Hiding all sections
   document.getElementById("totalAmount").style.display = "none";
   document.getElementById("donationsByDate").style.display = "none";
   document.getElementById("campaigns").style.display = "none";
 
-  // Show the selected section
+  // Showing the selected section
   document.getElementById(id).style.display = "block";
 }

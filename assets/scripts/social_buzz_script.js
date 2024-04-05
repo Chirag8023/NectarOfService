@@ -16,23 +16,25 @@ function updateCharCount() {
   document.getElementById("char-count").textContent = remainingChars;
 }
 
-// Add event listener to tweet button
+// event listener to tweet button
 document.getElementById("tweet-button").addEventListener("click", function () {
   const tweetText = document.getElementById("tweet-text").value;
   openTweetComposer(tweetText);
-  // Clear the textarea after tweeting
+  // Clearing the textarea after tweeting and resetting the counter
   document.getElementById("tweet-text").value = "";
   document.getElementById("char-count").textContent = 260;
 });
 
-// Add event listener to textarea to update character count
+// Adding event listener to textarea to update character count
 document
   .getElementById("tweet-text")
   .addEventListener("input", updateCharCount);
 
-// Update character count initially
+// Updating character count initially
 updateCharCount();
 
+
+// for fetching tweet url and putting it in a blockqute for tweet rendering by api
 document.addEventListener("DOMContentLoaded", function () {
   fetch("tweets.json")
     .then((response) => response.json())
@@ -45,24 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-    // Define an array of words
+// for the heading typing text
     const wordsArray = ["motivate", "encourage", "inspire"];
 
-    // Get references to the header and the word span
     const header = document.getElementById("inspireHeader");
     const wordSpan = document.getElementById("inspireWord");
     
-    // Initialize index for the array
     let currentIndex = 0;
     let currentCharIndex = 0;
-    let typingSpeed = 110; // Adjust typing speed (milliseconds per character)
+    let typingSpeed = 110;
     
     // Function to update the word with typing effect
     function updateWordWithTyping() {
         const currentWord = wordsArray[currentIndex];
         if (currentCharIndex < currentWord.length) {
-            // Add a character to the word
+            // Adding character by character to the word
             wordSpan.textContent += currentWord.charAt(currentCharIndex);
             currentCharIndex++;
             setTimeout(updateWordWithTyping, typingSpeed);
@@ -77,14 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to erase the word with typing effect
     function eraseWordWithTyping() {
         if (wordSpan.textContent.length > 0) {
-            // Remove a character from the word
+            // Remove a character by character from the word
             wordSpan.textContent = wordSpan.textContent.slice(0, -1);
-            setTimeout(eraseWordWithTyping, typingSpeed / 1.2); // Erase faster
+            setTimeout(eraseWordWithTyping, typingSpeed / 1.2);
         } else {
             // Erasing complete, start typing next word
-            setTimeout(updateWordWithTyping, 1200); // Wait for 1 seconds before typing next word
+            setTimeout(updateWordWithTyping, 1200); // Wait for 1.2 seconds before typing next word
         }
     }
     
-    // Start the typing effect
+    // Start the typing effect in 0.5 seconds
     setTimeout(updateWordWithTyping,500);

@@ -1,5 +1,5 @@
 <?php
-// define a base path of this file
+// defining a base path of this file
 define('ADMIN_MAIN_BASE_PATH', dirname(__FILE__) . '/');
 include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
 ?>

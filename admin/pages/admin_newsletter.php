@@ -5,23 +5,23 @@ include ADMIN_NEWSLETTER_BASE_PATH .'../../assets/scripts/dbconnect.php';
 
 
 function sendNewsletter($conn, $newsletter_content) {
-    // Retrieve subscribers from database
+    // Retrieving subscribers from database
     $sql = "SELECT * FROM newsletter_subscribers";
     $result = $conn->query($sql);
 
-    // If subscribers found, send email to each one
+    // If subscribers found, sending email to each one
     if ($result->num_rows > 0) {
-        // Set SMTP settings
+        // Setting SMTP settings
         ini_set('SMTP', "127.0.0.1");
         ini_set('smtp_port', "1025");
 
-        // Loop through each subscriber
+        // Loopping through each subscriber
         while($row = $result->fetch_assoc()) {
             $name = $row["name"];
             $email = $row["email"];
             $token = $row["token"];
 
-            // Set email parameters
+            // Setting email parameters
             $to = $email;
             $subject = 'NectarOfService Newsletter';
             $message = 'Hello ' . $name . ",\n\n" . $newsletter_content . "\n\n";
@@ -31,7 +31,7 @@ function sendNewsletter($conn, $newsletter_content) {
             $headers = 'From: NectarOfService@gmail.com' . "\r\n" .
                        'Reply-To: NectarOfService@gmail.com' . "\r\n" ;
 
-            // Send the email
+            // Sending email
             if(!mail($to, $subject, $message, $headers)) {
                 throw new Exception('Email could not be sent.');
             }
@@ -43,7 +43,6 @@ function sendNewsletter($conn, $newsletter_content) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        // Check if the textarea is not empty
         if (empty($_POST['newsletter_content'])) {
             throw new Exception("Newsletter content cannot be empty.");
         }
@@ -54,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['chi_error_message'] = $e->getMessage();
     }
 
-    // Redirect to prevent form resubmission
+    // Redirecting to prevent form resubmission
     header("Location: {$_SERVER['PHP_SELF']}");
     exit;
 }

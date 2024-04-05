@@ -1,5 +1,5 @@
 <?php
-include 'dbconnect.php'; // Include your database connection
+include 'dbconnect.php';
 
 $ongoingCampaigns = "SELECT * FROM fundraising_campaigns WHERE current_amount < goal ORDER BY id DESC";
 $ongoingResult = $conn->query($ongoingCampaigns);
@@ -10,7 +10,7 @@ if ($ongoingResult->num_rows > 0) {
     while($row = $ongoingResult->fetch_assoc()) {
         $percentage = ($row["current_amount"] / $row["goal"]) * 100;
         
-        // Store campaign data in an array
+        // Storing campaign data in an array
         $campaign = [
             'title' => $row["title"],
             'description' => strlen($row['description']) > 200 ? substr($row['description'], 0, 200) . '...' : $row['description'].'<br><br>',

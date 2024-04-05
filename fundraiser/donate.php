@@ -4,10 +4,10 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 include "../assets/scripts/dbconnect.php";
 
-//sanitize the $_GET['campaign_id'] to prevent SQL injection as int and put it in $campaign_id
+//sanitizing the $_GET['campaign_id'] to prevent SQL injection as int and put it in $campaign_id
 $campaign_id = filter_var($_GET['campaign_id'], FILTER_SANITIZE_NUMBER_INT);
 
-// Fetch data from fundraising_campaigns table
+//data from fundraising_campaigns table
 $query = "SELECT * FROM fundraising_campaigns WHERE id = $campaign_id";
 $result = mysqli_query($conn, $query);
 
@@ -74,9 +74,8 @@ function generate_csrf_token() {
                 <select name="payment_type" id="payment_type" required>
                     <option value="paypal">PayPal</option>
                     <option value="upi">UPI</option>
-                    <!-- Add more payment options if needed -->
                 </select>
-                <!-- Add CSRF token -->
+                <!-- Added CSRF token -->
                 <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                 <input type="hidden" name="campaign_id" value="<?php echo $_GET['campaign_id']; ?>">
                 <input type="button" value="Donate" class="header-button" id="donateButton">

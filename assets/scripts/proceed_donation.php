@@ -9,13 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset
     $campaign_id = $_POST['campaign_id'];
     $amount = $_POST['amount'];
     $donor_name = $_POST['donor_name'];
-    $email = $_POST['email']; // Add email from the form
-    $phone_number = $_POST['phone_number']; // Add phone number from the form
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
 
     if ($amount <= 0) {
         echo "Please enter a valid amount greater than zero.";
     } else {
-        // Fetch campaign name based on campaign_id
+        // Fetching campaign name based on campaign_id
         $sql_campaign = "SELECT title FROM fundraising_campaigns WHERE id = $campaign_id";
         $result_campaign = $conn->query($sql_campaign);
 
@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset
             $row_campaign = $result_campaign->fetch_assoc();
             $campaign_name = $row_campaign['title'];
 
-            // Update fundraising_campaigns table
+            // Updating fundraising_campaigns table
             $sql_update = "UPDATE fundraising_campaigns SET current_amount = current_amount + $amount WHERE id = $campaign_id";
 
-            // Insert donation into donations table with campaign name, email, and phone number
+            // Inserting donation into donations table with campaign name, email, and phone number
             $sql_insert = "INSERT INTO donations (name, email, phone_number, amount, campaign_id, campaign_name) VALUES ('$donor_name', '$email', '$phone_number', $amount, $campaign_id, '$campaign_name')";
-            // Execute both queries within a transaction
+            // Execution of both queries within a transaction
             $conn->begin_transaction();
             $update_result = $conn->query($sql_update);
             $insert_result = $conn->query($sql_insert);
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset
                 // Commit transaction if both queries are successful
                 $conn->commit();
 
-                 // Set SMTP settings dynamically
+                 // Setting SMTP settings dynamically
                     ini_set("SMTP", "127.0.0.1");
                     ini_set("smtp_port", "1025");
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset
                       
                     $headers = "From: NectarOfService@gmail.com\r\n";
                     $headers .= "Return-Path: NectarOfService@gmail.com\r\n";
-                    // Send email to donor
+                    // Sending email to donor
                     mail($to, $subject, $body, $headers);
                     
                 // session variable to sent name, amount, receipt number and date to the next page

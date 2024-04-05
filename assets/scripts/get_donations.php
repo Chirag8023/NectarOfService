@@ -4,15 +4,15 @@
 //
 include 'dbconnect.php'; // Include your database connection
 
-// Fetch top 10 donations from the database
+// Fetching top 10 donations from the database
 $sql = "SELECT * FROM donations ORDER BY donation_time DESC LIMIT 10";
 $result = $conn->query($sql);
 
-// Prepare the response
+// Preparing the response
 $response = array();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        // Truncate campaign_name field if it's too long
+        // Truncating campaign_name field if it's too long
         $row['campaign_name'] = strlen($row['campaign_name']) > 20 ? substr($row['campaign_name'], 0, 20) . '...' : $row['campaign_name'];
         $response[] = $row;
     }

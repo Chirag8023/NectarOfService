@@ -18,6 +18,11 @@
 	src: local('Bungee Outline'), url('http://localhost/NectarOfService/assets/fonts/BungeeOutline-Regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: local('JetBrainsMono'), url('http://localhost/NectarOfService/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+}
+
 body::-webkit-scrollbar,
 textarea::-webkit-scrollbar {
 	width: 10px;
@@ -29,7 +34,6 @@ body::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
 	background: #888;
 	border-radius: 1px;
-	/* Make the scrollbar more curved */
 }
 
 body::-webkit-scrollbar-thumb:hover,
@@ -109,7 +113,6 @@ textarea::-webkit-scrollbar-thumb:active {
 	line-height: 6rem;
 	word-spacing: 1rem;
 	white-space: nowrap;
-	/* Prevent text from wrapping to next line */
 	font-family: 'Bungee Outline' !important;
 	font-size: 4rem;
 	max-width: 100%;
@@ -442,12 +445,6 @@ a:hover {
 	background-color: #04733a;
 }
 
-
-@font-face {
-	font-family: 'JetBrainsMono';
-	src: local('JetBrainsMono'), url('http://localhost/NectarOfService/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
-}
-
 .terminal-body {
 	width: 45%;
 	padding: 0% !important;
@@ -647,7 +644,6 @@ a:hover {
 .grid-container {
 	display: grid;
 	grid-template-columns: 1.8fr 1fr;
-	/* Two equal columns */
 	margin-bottom: -0.12rem;
 	margin-top: 4.9rem;
 	margin-right: -0.5rem;
@@ -655,7 +651,6 @@ a:hover {
 }
 
 .donation-about {
-	/* Styles for donation-section1 */
 	font-weight: 600;
 	word-spacing: 2px;
 	line-height: 2;
@@ -687,12 +682,9 @@ a:hover {
 	line-height: 2.5;
 	padding-bottom: 1rem;
 	padding-left: 20px;
-	/* Add padding for spacing */
 	padding-right: 10px;
 	overflow-y: auto;
-	/* Enable vertical scrollbar */
 	max-height: 24rem;
-	/* Set maximum height for scrollable area */
 }
 
 .description-container::-webkit-scrollbar {
@@ -703,7 +695,6 @@ a:hover {
 .description-container::-webkit-scrollbar-thumb {
 	background: #555;
 	border-radius: 1px;
-	/* Make the scrollbar more curved */
 }
 
 .description-container::-webkit-scrollbar-thumb:hover {
@@ -718,7 +709,6 @@ a:hover {
 .donation-section h2 {
 	text-align: center;
 	margin-bottom: 20px;
-	/* Adjusted margin */
 }
 
 .donation-section form {
@@ -844,7 +834,7 @@ a:hover {
 
 @media only screen and (max-width: 1200px) {
 	#social-buzz-top h1 {
-	  font-size: 3rem; /* Font size when screen width is 1000px or more */
+	  font-size: 3rem;
 	}
   }
 

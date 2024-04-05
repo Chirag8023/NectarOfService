@@ -4,7 +4,7 @@ include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/auth_check.php';
 include ADMIN_DONATIONS_BASE_PATH . '../../assets/scripts/dbconnect.php';
 
 function fetchDonations($pdo, $fromDate, $toDate) {
-    // Query to fetch donations within the date range
+    // Query for fetch donations within the date range
     $query = "SELECT id, name, amount, donation_time, campaign_name FROM donations WHERE donation_time BETWEEN :fromDate AND :toDate";
     $statement = $pdo->prepare($query);
     $statement->bindParam(':fromDate', $fromDate);
@@ -14,16 +14,14 @@ function fetchDonations($pdo, $fromDate, $toDate) {
 }
 
 try {
-    // Establish PDO connection
+    // Establishing PDO connection
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    // Set PDO to throw exceptions on error
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $error = '';
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-        // Get dates from form
         $fromDate = $_POST['from_date'];
-        // Create DateTime object from $toDate and add one day
+        // Creating DateTime object from $toDate and add one day to include that day too
         $toDate = new DateTime($_POST['to_date']);
         $toDate->modify('+1 day');
         $toDate = $toDate->format('Y-m-d');
@@ -34,31 +32,29 @@ try {
             exit();
         } else {
 
-        // Fetch donations
+        // Fetching donations
         $donations = fetchDonations($pdo, $fromDate, $toDate);
 
-        // Set headers for CSV file download
+        // headers for CSV file download
         header('Content-Type: text/csv');
         header("Content-Disposition: attachment; filename=$fromDate - $toDate donations.csv");
         
-        // Create a file pointer connected to the output stream
+        // A file pointer connected to the output stream
         $output = fopen('php://output', 'w');
         
-        // Write the CSV headers
+        // the CSV headers
         fputcsv($output, array('Donation ID', 'Name', 'Amount', 'Donation Time', 'Campaign Name'));
 
-        // Loop through donations and write each row to the CSV file
+        // Looping through donations and writing each row to the CSV file
         foreach ($donations as $donation) {
             fputcsv($output, $donation);
         }
 
-        // Close the file pointer
         fclose($output);
-        exit(); // Stop script execution after generating the CSV file
+        exit();
         }
     }
 } catch (PDOException $e) {
-    // Log the error message and display a user-friendly message
     error_log("Database error: " . $e->getMessage());
     die("An error occurred. Please try again later.");
 }

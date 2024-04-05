@@ -2,11 +2,8 @@
 <style>
 body {
     background-color: #0070ba;
-    /* PayPal blue */
     font-family: monospace;
-    /* PayPal uses Arial */
     color: #fff;
-    /* White text */
 }
 
 h2 {
@@ -57,7 +54,6 @@ form {
     display: flex;
     flex-direction: column;
     width: 300px;
-    /* Increase width to accommodate new fields */
     background-color: #fff;
     color: #000;
     padding: 20px;
@@ -69,11 +65,8 @@ select,
 textarea {
     margin-bottom: 10px;
     padding: 5px;
-    /* Add some padding */
     border: 1px solid #ccc;
-    /* Add a border */
     border-radius: 3px;
-    /* Add some border radius */
 }
 
 input[type="submit"] {
@@ -112,16 +105,15 @@ input[type="submit"]:hover {
     </div>
     <script>
     function processPayment() {
-        // Simulate credit card processing
+        // Simulating credit card processing
         var success = Math.random() < 0.8; // 80% chance of success
 
         if (success) {
-            // Send success message to main page
+            // success message to main page
             window.opener.postMessage('payment_success', 'http://localhost/nectarofservice/fundraiser/donate.php');
-            // Close the window
             window.close();
         } else {
-            // Show payment failed try again msg on screen
+            // payment failed try again msg on screen
             alert('Dummy Error Message: Payment failed. Please try again.');
         }
     }

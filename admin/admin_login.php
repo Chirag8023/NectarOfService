@@ -1,5 +1,5 @@
 <?php
-// Start session if not started
+// Starting session if not started
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -10,37 +10,32 @@ if (isset($_SESSION['chi_username'])) {
     exit;
 }
 
-// Define an array of usernames and hashed passwords
+// Defined an array of usernames and hashed passwords
 $users = array(
     'admin1' => '$2y$10$Y7EWRGs3cw4Hx2Dnx7bPRu59k5dqUjUAwi0x2MOdET9bdy0LiQvzm', // Password is "password1"
     'admin2' => '$2y$10$ZIldSIvqeOmft4ORq5MAjuttW47rymuTjl7NYit4lUwMft4HJ04Ty'  // Password is "password2"
 );
 
-// Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Check if the username exists in the array
     if (array_key_exists($username, $users)) {
-        // Verify the password using password_verify function
         if (password_verify($password, $users[$username])) {
-            // Set the session variable to the username
+            // Setting the session variable to the username
             $_SESSION['chi_username'] = $username;
 
             // Redirect to a secure page on successful login
             header("Location: http://localhost/nectarofservice/admin/admin_main.php");
             exit;
         } else {
-            // Store error message in session
             $_SESSION['chi_error_message'] = "Invalid username or password!";
         }
     } else {
-        // Store error message in session
         $_SESSION['chi_error_message'] = "Invalid username or password!";
     }
 
-    // Redirect to the same page to prevent form resubmission
+    // Redirecting to the same page to prevent form resubmission
     header("Location: {$_SERVER['REQUEST_URI']}");
     exit;
 }

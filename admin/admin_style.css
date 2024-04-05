@@ -8,14 +8,12 @@
     src: local('hammer-smith-one'), url('http://localhost/NectarOfService/assets/fonts/HammersmithOne-Regular.ttf') format('truetype');
 }
 
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 .main-body {
     font-family: 'inter';
     background-color: #000;
@@ -23,9 +21,7 @@
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* Sidebar and Main Content */
     grid-template-rows: auto 1fr;
-    /* Header and Main Content */
     min-height: 100vh;
 }
 
@@ -34,7 +30,6 @@ hr {
     margin-bottom: 1rem;
 }
 
-/* Header Styles */
 header {
     background: #ffc900;
     display: flex;
@@ -79,7 +74,6 @@ input[type="submit"]:active {
     transform: translate(2px, 2px);
 }
 
-/* Sidebar Styles */
 .sidebar {
     background: #ffc900;
     border-radius: 15px;
@@ -90,9 +84,7 @@ input[type="submit"]:active {
     padding: 20px;
     z-index: 100;
     grid-column: 1 / 2;
-    /* Sidebar occupies the first column */
     grid-row: 2 / -1;
-    /* Sidebar spans from the second row to the end */
 }
 
 .nav ul {
@@ -111,7 +103,6 @@ input[type="submit"]:active {
 }
 
 
-/* Main Content Styles */
 .main-content {
     max-height: 86.9vh;
     padding: 20px;
@@ -133,7 +124,6 @@ input[type="submit"]:active {
     margin-bottom: 1rem;
 }
 
-/* Webkit browsers like Chrome, Safari */
 .main-content::-webkit-scrollbar {
     width: 10px;
 }
@@ -141,7 +131,6 @@ input[type="submit"]:active {
 .main-content::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 115px;
-    /* Make the scrollbar more curved */
 }
 
 .main-content::-webkit-scrollbar-thumb:hover {

@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 require('fpdf/fpdf.php');
 
-// Generate the receipt PDF
+// Generating the receipt PDF
 generateReceipt($_SESSION['chi_donor_name'], $_SESSION['chi_date'], $_SESSION['chi_receipt_number'], $_SESSION['chi_amount']);
 
 

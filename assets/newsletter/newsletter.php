@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
     
     $conn->close();
     
-    // Redirect to prevent form resubmission
+    // Redirecting to prevent form resubmission
     header("Location: {$_SERVER['PHP_SELF']}");
     exit;
 }

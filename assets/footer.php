@@ -21,7 +21,6 @@
         <div class="common-links">
             <a href="http://localhost/NectarOfService/assets/about.php" class="common-link">About</a>
             <a href="http://localhost/NectarOfService/assets/contact.php" class="common-link">Contact</a>
-            <!-- Add more common links as needed -->
         </div>
     </div>
 </div>
@@ -89,13 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 quote: "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it.",
                 username: "Jordan Belfort"
             }
-            // Add more quote and username pairs as needed
         ];
         var randomIndex = Math.floor(Math.random() * quoteAndUsernames.length);
         return quoteAndUsernames[randomIndex];
     }
 
-    // Update the quote and username elements
+    // Updating the quote and username elements
     var quoteElement = document.querySelector('.middle-footer-quote h3');
     var usernameElement = document.querySelector('.middle-quote-name b');
 

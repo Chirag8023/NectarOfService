@@ -10,9 +10,8 @@ function sanitize_input($data) {
     return $data;
 }
 
-// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate input
+    // Sanitizing and validating input
     $id = sanitize_input($_POST["id"]);
     $new_url = sanitize_input($_POST["new_url"]);
     
@@ -21,15 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (!is_numeric($id) || $id < 1 || $id > 6) {
         $error = "Invalid ID.";
     } else {
-        // Load the JSON
+        // Loading the JSON
         $json = file_get_contents(ADMIN_SOCIAL_BUZZ_BASE_PATH . '../../social_buzz/tweets.json');
         $data = json_decode($json, true);
 
-        // Update URL for the specified ID
+        // Updating URL for the specified ID
         if (isset($data[$id])) {
             $data[$id] = $new_url;
             $json = json_encode($data, JSON_PRETTY_PRINT);
-            // Write updated data back to the file
+            // Writing updated data back to the file
             file_put_contents(ADMIN_SOCIAL_BUZZ_BASE_PATH . '../../social_buzz/tweets.json', $json);
             $success = "URL for ID $id has been updated.";
         } else {
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['success'] = $success;
     $_SESSION['error'] = $error;
 
-    // Redirect to the same page to prevent form resubmission
+    // Redirecting to the same page to prevent form resubmission
     header("Location: " . $_SERVER["PHP_SELF"]);
     exit;
 }

@@ -80,16 +80,14 @@ footer {
 
     <script>
     function processPayment() {
-        // Simulate UPI processing
+        // Simulating UPI processing
         var success = Math.random() < 0.8; // 80% chance of success
 
         if (success) {
-            // Send success message to main page
+            // success message to main page
             window.opener.postMessage('payment_success', 'http://localhost/nectarofservice/fundraiser/donate.php');
-            // Close the window
             window.close();
         } else {
-            // Show payment failed try again msg on screen
             alert('Dummy Error Message: Payment failed. Please try again.');
         }
     }
