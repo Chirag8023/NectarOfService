@@ -954,3 +954,38 @@ a:hover {
 .thank-you-container a {
     color: #000;
 }
+
+/*Contact us page*/
+/* Grid container */
+.content-grid-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+    padding: 20px;
+    margin-bottom: -0.12rem;
+	margin-top: 4.9rem;
+	margin-right: -0.5rem;
+}
+
+/* Left content */
+.content-grid-container .left-content {
+    font-family: 'inter';
+    margin-left: 1rem;
+    font-size: 30px;
+    color: #000;
+    margin-top: -0.5rem;
+}
+
+/*Right content*/
+.content-grid-container .right-content {
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'inter';
+    font-weight: 600;
+    margin-right: 1rem;
+    border-radius: 1px;
+    border: 3px solid black;
+    box-shadow: 7px 7px rgba(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
