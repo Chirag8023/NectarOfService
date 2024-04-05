@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const tweetsContainer = document.getElementById("tweets-container");
       for (const key in data) {
         const tweetId = data[key].split("/").pop();
-        tweetsContainer.innerHTML += `<blockquote class="twitter-tweet" data-cards="hidden"><a href="https://twitter.com/user/status/${tweetId}"></a></blockquote>`;
+        tweetsContainer.innerHTML += `<blockquote class="twitter-tweet" data-cards="hidden" data-conversation="none"><a href="https://twitter.com/user/status/${tweetId}"></a></blockquote>`;
       }
     });
 });
