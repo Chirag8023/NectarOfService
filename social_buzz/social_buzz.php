@@ -1,11 +1,5 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<link rel="preload" href="/NectarOfService/assets/fonts/CormorantGaramond-Regular.ttf" as="font" type="font/ttf"
-    crossorigin>
-<link rel="preload" href="/NectarOfService/assets/fonts/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf"
-    crossorigin>
-<link rel="preload" href="/NectarOfService/assets/fonts/Bungee-Regular.ttf" as="font" type="font/ttf"
-    crossorigin>
 
 <title>Social Buzz</title>
 <body class="body">
