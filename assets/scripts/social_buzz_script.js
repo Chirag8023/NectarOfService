@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(eraseWordWithTyping, typingSpeed / 1.2); // Erase faster
         } else {
             // Erasing complete, start typing next word
-            setTimeout(updateWordWithTyping, 1000); // Wait for 1 seconds before typing next word
+            setTimeout(updateWordWithTyping, 1200); // Wait for 1 seconds before typing next word
         }
     }
     
     // Start the typing effect
-    updateWordWithTyping();
+    setTimeout(updateWordWithTyping,500);
