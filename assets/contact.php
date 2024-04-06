@@ -7,9 +7,10 @@
             <div class="left-content">
                 <h1>Contact us</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio ac dolor tincidunt ultricies.
-                    Phasellus vitae placerat turpis. Integer interdum nibh non diam malesuada, vitae venenatis libero
-                    commodo. Nam tincidunt tellus at dui commodo, in tempus purus cursus.
+                    Got questions?<br> 
+                    Feel free to drop us a line anytime. 
+                    Get in touch using the details here.
+                    Looking forward to hearing from you!
                 </p>
             </div>
             <div class="right-content">
