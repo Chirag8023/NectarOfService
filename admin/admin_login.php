@@ -46,9 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="admin-login">
+<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='81' height='81' patternTransform='scale(3) rotate(120)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(43,100%,50.6%,1)'/><path d='M0 0v40h40V0H0zm40 40v40h40V40H40zM4 4h32v32H4V4zm4 4v24h24V8H8zm4 4h16v16H12V12zm4.043 3.988v8.004h8.004v-8.004h-8.004zM44 44h32v32H44V44zm4 4v24h24V48H48zm4 4h16v16H52V52zm4.043 3.984v8.006h8.004v-8.006h-8.004z' transform='translate(0.5,0)' stroke-width='1' stroke='none' fill='hsla(192,70.1%,43.3%,1)'/><path d='M44 4v32h32V4H44zm4 4h24v24H48V8zm4 4v16h16V12H52zm4 4h8v8h-8v-8zM4 44v32h32V44H4zm4 4h24v24H8V48zm4 4v16h16V52H12zm4 4h8v8h-8v-8z' transform='translate(0.5,0)' stroke-width='1' stroke='none' fill='hsla(200,94.5%,14.3%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)'/></svg>
+
+    <h3>NectarOfService</h3>
     <div class="login-container">
-        <h3>NectarOfService</h3>
         <h2>Admin Login</h2>
+        <p>Welcome Back! Enter your credentials to<br>access admin panel.</p>
         <?php if (isset($_SESSION['chi_error_message'])) { ?>
         <p style="color:#ff0037; font-weight: 600;">
             <?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?></p>
