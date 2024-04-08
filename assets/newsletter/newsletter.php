@@ -62,9 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
         <?php unset($_SESSION['chi_success_message']); ?>
         <?php } ?>
         <form method="post">
-            <input type="text" id="name" name="subscriber_name" placeholder="name" required>
-            <input type="email" id="email" name="subscriber_email" placeholder="email" required>
-            <button type="submit">-></button>
+            <input type="text" id="name" name="subscriber_name" placeholder="Name" required>
+            <input type="email" id="email" name="subscriber_email" placeholder="Email" required>
+            <button type="submit">&#8594;</button>
         </form>
     </div>
 </div>

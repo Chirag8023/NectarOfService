@@ -574,7 +574,7 @@ a:hover {
 }
 
 .newsletter {
-	background-image: url('http://localhost/NectarOfService/assets/images/nlbg.svg');
+	background: #ff5f56;
 	text-align: center;
 	align-items: center;
 	justify-content: space-around;
@@ -587,7 +587,7 @@ a:hover {
 	padding: 1rem 2rem;
 	width: 70%;
 	font-family: 'inter';
-	color: #fff;
+	color: #000;
 }
 
 
