@@ -581,7 +581,7 @@ a:hover {
 	justify-content: space-around;
 	display: flex;
 	flex-direction: row;
-	box-shadow: 12px 12px rgba(0, 0, 0);
+	box-shadow: 12px 12px #ff00ff;
 	margin: auto;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
@@ -634,14 +634,14 @@ a:hover {
 
 .newsletter button[type="submit"] {
 	font-family: "Inter";
-	color: #fff;
-	background-color: #000;
+	color: #000;
+	background-color: #ff00ff;
 	padding: 0rem 2rem 0.4rem 2rem;
 	font-size: 2rem;
-	border: none;
 	font-weight: 600;
 	margin-left: -0.2rem;
 	border: 2px solid black;
+	border-left:0;
 }
 
 .newsletter button[type="submit"]:active {
@@ -864,7 +864,7 @@ a:hover {
 }
 
 #social-buzz-middle h1 {
-    background-color: #f092dd77;
+    background-color: #ff9beec2;
     text-align: right;
     padding: 2rem 1rem;
 }
