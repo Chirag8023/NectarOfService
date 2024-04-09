@@ -76,6 +76,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	margin-top: -25px;
 	margin-bottom: 1.5rem;
 	font-weight: bold;
+	font-size:1.2rem;
 	display: inline-block;
 }
 
@@ -150,37 +151,37 @@ textarea::-webkit-scrollbar-thumb:active {
 	box-sizing: border-box;
 }
 
-.footer-logo {
+.footer .footer-logo {
 	font-size: 1.5em;
 	font-weight: bold;
 }
 
-.social-links {
+.footer .social-links {
 	margin-left: 20px;
 	margin-top: 10px;
 }
 
-.social-link {
+.footer .social-link {
 	margin-right: 10px;
 	text-decoration: none;
 	color: #fff;
 }
 
-.common-links {
+.footer .common-links {
 	font-weight: 500;
 	font-size: large;
 	margin-top: 10px;
 	text-align: left;
 }
 
-.common-link {
+.footer .common-link {
 	margin-bottom: 5px;
 	text-decoration: none;
 	color: #ffffff;
 	padding: 20px;
 }
 
-.middle {
+.footer .middle {
 	flex: 1;
 	font-size: large;
 	display: flex;
@@ -574,7 +575,7 @@ a:hover {
 }
 
 .newsletter {
-	background: #ff5f56;
+	background: #0000;
 	text-align: center;
 	align-items: center;
 	justify-content: space-around;
@@ -588,6 +589,7 @@ a:hover {
 	width: 70%;
 	font-family: 'inter';
 	color: #000;
+	border: 2px solid black;
 }
 
 
@@ -600,6 +602,8 @@ a:hover {
 .newsletter p {
 	font-size: 1.2rem;
 	font-weight: 600;
+	text-align: right;
+	white-space: nowrap;
 }
 
 .newsletter form {
@@ -613,9 +617,12 @@ a:hover {
 
 .newsletter input {
 	padding: 0.8rem;
+	font-weight: 600;
 	font-size: 1rem;
-	border: none;
 	margin-right: 0.2rem;
+	background:#0000;
+	border: 2px solid black;
+	max-width: 12rem;
 }
 
 .newsletter input::placeholder {
@@ -634,6 +641,7 @@ a:hover {
 	border: none;
 	font-weight: 600;
 	margin-left: -0.2rem;
+	border: 2px solid black;
 }
 
 .newsletter button[type="submit"]:active {
