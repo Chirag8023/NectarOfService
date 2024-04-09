@@ -148,14 +148,15 @@ input[type="submit"]:active {
     height: 100vh;
     font-family: 'inter';
 }
+
 .admin-login h3 {
-    position:absolute;
+    position: absolute;
     text-align: end;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     border-bottom: 3px solid #000;
     width: 67.5%;
-    padding:0.5rem;
-    top:0;
+    padding: 0.5rem;
+    top: 0;
     margin: 1rem;
 }
 
@@ -168,6 +169,7 @@ input[type="submit"]:active {
     z-index: -1;
     border-right: 3px solid #000;
 }
+
 .admin-login .login-container {
     display: flex;
     flex-direction: column;
@@ -187,7 +189,7 @@ input[type="submit"]:active {
 .login-container p {
     margin-bottom: 1rem;
     font-weight: 600;
-    color:#3d320d;
+    color: #3d320d;
 }
 
 .login-container input {
@@ -207,11 +209,70 @@ input[type="submit"]:active {
     font-weight: 500;
 }
 
-.login-container button{
+.login-container button {
     font-weight: 600;
-    padding:1rem 3rem;
+    padding: 1rem 3rem;
     font-size: 1.4rem;
 }
+
+/*status_checker*/
+.status-indicator {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid black;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    font-family: 'inter';
+    font-weight: 600;
+}
+
+.indicator {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin: -0.05rem;
+    position: relative;
+}
+
+.indicator.green,
+.indicator.green:before {
+    background-color: #04a958;
+}
+
+.indicator.red,
+.indicator.red:before {
+    background-color: red;
+}
+
+.indicator:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    animation: pulse 1.8s infinite ease-in;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(2.3);
+        opacity: 0;
+    }
+}
+
 /**/
 .admin_campaign_message_bar {
     grid-column: 1 / -1;
