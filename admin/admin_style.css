@@ -154,7 +154,7 @@ input[type="submit"]:active {
     text-align: end;
     font-size: 1.5rem;
     border-bottom: 3px solid #000;
-    width: 67.5%;
+    width: 57.5%;
     padding: 0.5rem;
     top: 0;
     margin: 1rem;
@@ -164,7 +164,7 @@ input[type="submit"]:active {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30%;
+    width: 40%;
     height: 100%;
     z-index: -1;
     border-right: 3px solid #000;
@@ -175,10 +175,10 @@ input[type="submit"]:active {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    margin: 0 18%;
+    margin: 0 17.5%;
     font-family: 'inter';
     background-color: #ffc900;
-    width: 30%;
+    width: 25%;
 }
 
 .login-container h2 {
@@ -195,7 +195,7 @@ input[type="submit"]:active {
 .login-container input {
     margin-top: 0.5rem;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     border: 2px solid #000;
     border-radius: 2px;
     font-family: 'inter';
@@ -224,7 +224,7 @@ input[type="submit"]:active {
     font-size: 1.5rem;
     position: absolute;
     bottom: 0;
-    left: 30%;
+    left: 40%;
     right: 0;
     font-family: 'inter';
     font-weight: 600;

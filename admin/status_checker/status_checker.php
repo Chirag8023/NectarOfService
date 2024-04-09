@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
+
 <div class="status-indicator">
     <div>
         <span>Mail Server</span>
