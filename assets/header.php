@@ -4,8 +4,8 @@
     </div>
     <div style="display:flex;">
         <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php"><button class="header-button"
-                id="campaigns_button">Campaigns</button></a>
+                >Campaigns</button></a>
         <a href="http://localhost/NectarOfService/social_buzz/social_buzz.php"><button class="header-button"
-                id="social_buzz_button">Social Buzz</button></a>
+                >Social Buzz</button></a>
     </div>
 </div>

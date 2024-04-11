@@ -2,11 +2,11 @@
     <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
     <script src="http://localhost/NectarOfService/assets/scripts/fetch_donations.js"></script>
 
-    <body style="background-image:url('http://localhost/NectarOfService/assets/images/camp_home.svg');" class='body'>
+    <body class='body'>
         <?php include "../assets/header.php"; ?>
         <div class="main-area">
             <h2>Ongoing Campaigns</h2>
-            <p style="color:#fff; margin-top:-1.2rem; font-weight:500;">*All campaigns are eligible for 80D tax
+            <p style="color:#000; margin-top:-1.2rem; font-weight:600; font-size:1.2rem;">*All campaigns are eligible for 80D tax
                 benefits.</p>
             <br>
             <div id="campaignContent">

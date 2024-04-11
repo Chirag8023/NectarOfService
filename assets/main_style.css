@@ -214,12 +214,12 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 .main-area h2 {
-	color: #ffffff;
+	color: #000;
+	text-shadow: -4px 4px #ffc900;
 	font-size: 3rem;
 	font-family: 'bungee';
-	font-weight: 500;
+	font-weight: 100;
 	margin: 0;
-	text-shadow: 3px 3px black;
 }
 
 .scroll-text {
@@ -256,7 +256,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	position: fixed;
 	top: 4.9rem;
 	right: 0;
-	background: #04733a;
+	background: #c02;
 	width: 20%;
 	border-left: 3px solid black;
 	box-sizing: border-box;
@@ -341,11 +341,10 @@ textarea::-webkit-scrollbar-thumb:active {
 .progress {
 	width: 100%;
 	border: 2px solid black;
-	border-right: 6px solid #000;
-	background-color: #faf3e4;
+	background-color: #fff;
 	position: relative;
 	height: 30px;
-	border-radius: 10px;
+	border-radius: 1px;
 }
 
 
@@ -353,8 +352,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 8px;
-	border-left: 4px solid #000;
+	border-radius: 1px;
 	height: 100%;
 	background-color: #ffc900;
 	text-align: center;
@@ -437,13 +435,6 @@ a:hover {
 
 }
 
-#social_buzz_button:hover {
-	background-color: #560090;
-}
-
-#campaigns_button:hover {
-	background-color: #04733a;
-}
 
 .terminal-body {
 	width: 45%;
@@ -566,9 +557,9 @@ a:hover {
 	border: 2px solid black;
 	border-radius: 1px;
 	margin: 2rem -0.1rem 2rem -0.1rem;
-	box-shadow: 10px 10px rgba(0, 0, 0);
+	box-shadow: 0.3rem 0.3rem #000;
 	padding: 0 1rem 0 1rem;
-	background-color: #fffdf8;
+	background-color: #fff;
 	word-wrap: break-word;
 	font-weight: 600;
 }
@@ -988,7 +979,7 @@ a:hover {
 	margin-right: 1rem;
 	border-radius: 1px;
 	border: 3px solid black;
-	box-shadow: 7px 7px rgba(0, 0, 0);
+	box-shadow: 7px 7px #c02;
 	padding: 20px;
 	margin-bottom: 2rem;
 }
