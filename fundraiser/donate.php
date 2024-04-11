@@ -83,7 +83,7 @@ function generate_csrf_token() {
             <div class="share-buttons">
                 <a href="https://twitter.com/intent/tweet?text=Donate in this awesome campaign on NectarOfService Platform:%0A<?php echo $campaign_name?>%0A%0A<?php echo 'NectarOfService.com/fundraiser/donate?campaign_id='.$campaign_id;?>%0A[DEMO PURPOSE LINK ONLY!]"
                     target="_blank">
-                    <button style="background-color:#08a0e9;"><img
+                    <button style="background-color:#00aeff;"><img
                             src="http://localhost/nectarofservice/assets/images/twitter_logo.png">Share on
                         Twitter</button>
                 </a>

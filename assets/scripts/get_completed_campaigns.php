@@ -27,7 +27,7 @@ if ($completedResult->num_rows > 0) {
     <?php if (file_exists($campaign['image_path'])): ?>
     <div class="image-container" style="flex: 30%; height:12rem;">
         <img src="<?php echo $campaign['image_path']; ?>"
-            style="object-fit: cover; width: 100%; max-height: 100%; height: auto; border-top-left-radius: 1px; border-bottom-left-radius: 1px; border-right: 2px solid black; margin-left: -1rem; margin-bottom: -1rem;"
+            style="object-fit: cover; width: 100%; max-height: 100%; height: auto; border: 3px solid black; margin-left: -1rem; margin-bottom: -1rem;"
             alt="Campaign Image">
     </div>
     <?php endif; ?>
