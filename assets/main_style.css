@@ -807,9 +807,7 @@ a:hover {
 	padding-top: 3.7rem;
 	margin-left: -1rem;
 	margin-right: -0.5rem;
-	background-image: url('http://localhost/NectarOfService/assets/images/blob.svg');
 	min-height: 100vh;
-	border-bottom: 4px solid #000;
 }
 
 #social-buzz-top h1 {
@@ -817,7 +815,7 @@ a:hover {
 	text-align: center;
 	font-size: 3.5em;
 	font-weight: 500;
-	color: #fff;
+	color: #000;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	position: absolute;
@@ -833,8 +831,8 @@ a:hover {
 
 #social-buzz-top h2 {
 	text-align: center;
-	color: #e5bfff;
-	margin-bottom: 14rem;
+	color: #333;
+	margin-bottom: 8rem;
 	font-weight: 700;
 	font-size: 2rem;
 	margin-top: 8rem;
@@ -849,7 +847,7 @@ a:hover {
 }
 
 #social-buzz-middle h1 {
-	background-color: #ff9beec2;
+	background-color: #ffc9006b;
 	text-align: right;
 	padding: 2rem 1rem;
 }
@@ -859,12 +857,12 @@ a:hover {
 }
 
 #social-buzz-bottom #tweet-popup {
-	background-color: #ff9beec2;
+	background-color: #ffc900;
 	border-radius: 1px;
 	border:2px solid black;
 	width: 700px;
 	padding: 1.3rem;
-	box-shadow: 14px 14px #f0f;
+	box-shadow: 14px 14px #000;
 	margin-bottom: 1rem;
 	margin: auto;
 	margin-top: 2rem;
@@ -902,19 +900,19 @@ a:hover {
 }
 
 #social-buzz-bottom #tweet-button {
-	background-color: #ffc900;
-	color: #000;
+	background-color: #ef0028;
+	color: #fff;
 	font-weight: 600;
-	border: 2px solid black;
+	border: none;
 	border-radius: 999px;
 	padding: 10px 20px;
 	font-size: 1.5rem;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.2s ease-in-out;
 }
 
 #social-buzz-bottom #tweet-button:hover {
-	background-color: #fff;
+	background-color: #000;
 }
 
 /* Thank you page */

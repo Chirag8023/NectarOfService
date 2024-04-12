@@ -78,10 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (wordSpan.textContent.length > 0) {
             // Remove a character by character from the word
             wordSpan.textContent = wordSpan.textContent.slice(0, -1);
-            setTimeout(eraseWordWithTyping, typingSpeed / 1.2);
+            setTimeout(eraseWordWithTyping, typingSpeed / 1.1);
         } else {
             // Erasing complete, start typing next word
-            setTimeout(updateWordWithTyping, 1200); // Wait for 1.2 seconds before typing next word
+            setTimeout(updateWordWithTyping, 1000); // Wait for 1 seconds before typing next word
         }
     }
     

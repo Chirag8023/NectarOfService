@@ -5,12 +5,12 @@
 <body class="body">
     <?php include '../assets/header.php'; ?>
     <div id="social-buzz-top">
-        <h1 id="inspireHeader">be the voice, that can <span id="inspireWord" style="color:#e593ff"></span></h1>
+        <h1 id="inspireHeader">be the voice, that can <span id="inspireWord" style="color:#ff9800"></span></h1>
         <h2>because your words resonate louder</h2>
         <div id="tweets-container"></div>
     </div>
     <div id="social-buzz-middle">
-        <h1>Use <span style="color:#9900ff">#NectarOfService</span> on socials to support the cause</h1>
+        <h1>Use <span style="color:#ef0028">#NectarOfService</span> on socials to support the cause</h1>
     </div>
 
     <div id="social-buzz-bottom">
