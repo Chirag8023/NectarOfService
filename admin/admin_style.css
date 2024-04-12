@@ -109,7 +109,6 @@ input[type="submit"]:active {
     color: #000;
     background-color: #ffffe5;
     overflow-y: auto;
-    /* Add scrollbar if content overflows vertically */
     border: 2px solid #000;
     border-right: 4px solid #000;
     border-bottom: 4px solid #000;
