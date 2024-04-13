@@ -338,10 +338,6 @@ textarea::-webkit-scrollbar-thumb:active {
 			top: -300%;
 		}
 	}
-	#twinkle-lights {
-		width: 18rem !important;
-		transform: translate(0,0.2rem) rotate(-6deg) !important;
-	}
 }
 
 .main-area {
