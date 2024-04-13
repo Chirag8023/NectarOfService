@@ -133,7 +133,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	margin-top: 2px;
 	color: #fff;
 	border-top: 3px solid black;
-	background-color: #332e1c;
+	background-color: #140f00;
 }
 
 .footer-content {
@@ -411,8 +411,8 @@ a:hover {
 
 
 .header a {
-	font-size: 1.2rem;
-	font-weight: bold;
+	font-size: 1.3rem;
+	font-weight: 700;
 	color: #000;
 	text-decoration: none;
 	padding: 0 1rem;
@@ -693,7 +693,7 @@ a:hover {
 
 .donation-about h2 {
 	font-family: 'Inter';
-	font-variant: small-caps;
+	text-shadow: -1px 2px #ffc900;
 	font-weight: 700;
 	font-size: 2rem;
 	margin: 0.5rem;
@@ -714,7 +714,7 @@ a:hover {
 }
 
 .description-container {
-	font-size: 1rem;
+	font-size: 1.1rem;
 	line-height: 2.5;
 	padding-bottom: 1rem;
 	padding-left: 20px;
@@ -770,13 +770,19 @@ a:hover {
 	border: 2px solid #000;
 	border-radius: 1px;
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 1.1rem;
 }
 
-.donation-section input[type="button"] {
+.donation-section #donateButton {
 	width: 100%;
 	padding: 0.8rem;
-	font-size: 20px;
+	font-size: 1.4rem;
+	text-align: center;
+	background-color: #ffc900;
+	transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.donation-section #donateButton:hover {
+	background-color: #000;
 }
 
 .donation-page-progress {
