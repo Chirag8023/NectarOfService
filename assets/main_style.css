@@ -132,7 +132,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	padding: 1rem;
 	margin-top: 2px;
 	color: #fff;
-	border-top:3px solid black;
+	border-top: 3px solid black;
 	background-color: #332e1c;
 }
 
@@ -851,7 +851,7 @@ a:hover {
 #social-buzz-bottom #tweet-popup {
 	background-color: #ffc900;
 	border-radius: 1px;
-	border:2px solid black;
+	border: 2px solid black;
 	width: 700px;
 	padding: 1.3rem;
 	box-shadow: 14px 14px #000;
