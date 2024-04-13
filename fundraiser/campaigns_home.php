@@ -5,7 +5,7 @@
     <body class='body'>
         <?php include "../assets/header.php"; ?>
         <div class="main-area">
-            <img src="http://localhost/nectarofservice/assets/images/memphis-twinkle-lights.png" style="position:absolute; top:-1%;right:19%; z-index:-1; filter:saturate(200%);">
+            <img src="http://localhost/nectarofservice/assets/images/memphis-twinkle-lights.png" id="twinkle-lights" style="position:absolute; top:-1%;right:20%; z-index:-1; filter:saturate(200%); width:24rem; transform: translate(0,-1.4rem) rotate(-6deg);">
             <h2>Ongoing Campaigns</h2>
             <p style="color:#000; margin-top:-1.2rem; font-weight:600; font-size:1.2rem;">*All campaigns are eligible for 80D tax
                 benefits.</p>

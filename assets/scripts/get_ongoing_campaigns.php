@@ -36,7 +36,7 @@ if ($ongoingResult->num_rows > 0) {
             alt="Campaign Image">
     </div>
     <?php endif; ?>
-    <div class="right-side-content-wrapper" style="flex: 70%; padding-right:0.2rem;">
+    <div class="right-side-content-wrapper">
         <h3><?php echo $campaign["title"]; ?></h3>
         <p><?php echo $campaign["description"]; ?></p>
         <p>Goal: ₹ <?php echo $campaign["goal"]; ?></p>
@@ -49,7 +49,7 @@ if ($ongoingResult->num_rows > 0) {
         <p>This campaign has ended.</p>
         <?php else: ?>
         <a href="http://localhost/nectarofservice/fundraiser/donate.php?campaign_id=<?php echo $campaign['id']; ?>"><button
-                class="header-button" style="margin: 0.8rem 0 0.8rem 0;">Donate</button></a>
+                class="header-button">Donate</button></a>
         <?php endif; ?>
     </div>
 </div>

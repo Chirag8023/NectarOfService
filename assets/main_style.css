@@ -318,9 +318,29 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
+	.main-area h2 {
+		font-size: 2.5rem;
+	}
+	.activity-feed ul{
+		padding-left: 0;
+	}
 	.scroll-text ul li {
 		width: 50%;
+		align-self: center;
+	}
+	@keyframes my-animation {
+		0% {
+			top: 100%;
+		}
+	
+		100% {
+			top: -300%;
+		}
+	}
+	#twinkle-lights {
+		width: 18rem !important;
+		transform: translate(0,0.2rem) rotate(-6deg) !important;
 	}
 }
 
@@ -547,7 +567,28 @@ a:hover {
 	margin: 2rem -0.1rem 2rem -0.1rem;
 	padding: 0 1rem 0 1rem;
 	word-wrap: break-word;
-	font-weight: 600;
+	font-weight: 500;
+}
+
+.right-side-content-wrapper {
+	flex: 70%; 
+	padding-right:0.2rem;
+}
+
+.right-side-content-wrapper h3 {
+	margin:0.8rem 0; 
+	font-size:1.5rem;
+}
+
+.right-side-content-wrapper p {
+	margin:0.8rem 0; 
+	font-size:1.1rem;
+}
+
+.right-side-content-wrapper button {
+	margin:0.8rem 0; 
+	padding:0.5rem 3rem; 
+	font-size:1.2rem;
 }
 
 .newsletter {
