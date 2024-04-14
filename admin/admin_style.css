@@ -38,7 +38,7 @@ header {
     align-items: center;
     padding: 12px;
     text-align: left;
-    border-radius: 15px;
+    border-radius: 0;
     border: 4px solid #000;
     border-bottom: 2px solid #000;
     color: #000;
@@ -54,7 +54,7 @@ button,
 input[type="submit"] {
     background-color: #000;
     border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: 0;
     box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
     box-sizing: border-box;
     color: #fff;
@@ -76,7 +76,7 @@ input[type="submit"]:active {
 
 .sidebar {
     background: #d8f5ff;
-    border-radius: 15px;
+    border-radius: 0;
     border: 2px solid #000;
     border-left: 4px solid #000;
     border-bottom: 4px solid #000;
@@ -112,7 +112,7 @@ input[type="submit"]:active {
     border: 2px solid #000;
     border-right: 4px solid #000;
     border-bottom: 4px solid #000;
-    border-radius: 15px;
+    border-radius: 0;
     scroll-behavior: smooth;
     font-family: 'hammer-smith-one';
 }
@@ -127,7 +127,7 @@ input[type="submit"]:active {
 
 .main-content::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 115px;
+    border-radius: 0;
 }
 
 .main-content::-webkit-scrollbar-thumb:hover {
@@ -194,7 +194,7 @@ input[type="submit"]:active {
     padding: 10px;
     width: 100%;
     border: 2px solid #000;
-    border-radius: 2px;
+    border-radius: 0;
     font-family: 'inter';
     font-size: 1.4rem;
     font-weight: 500;
@@ -278,9 +278,7 @@ input[type="submit"]:active {
     height: 6.9vh;
     width: 100%;
     background-color: #d8f5ff;
-    border-radius: 15px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 0;
     border-bottom: 4px solid black;
     border-right: 4px solid black;
     border-left: 4px solid black;
@@ -288,11 +286,6 @@ input[type="submit"]:active {
     flex-direction: row;
     align-items: center;
     padding-left: 1rem;
-}
-
-.admin-campaigns .main-content {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
 }
 
 .admin_campaign_message_bar p {

@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 <title>Admin Campaigns</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
-<body class="main-body admin-campaigns">
+<body class="main-body">
 
     <?php include ADMIN_CAMPAIGNS_BASE_PATH . 'admin_header.php'; ?>
 

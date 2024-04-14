@@ -41,21 +41,21 @@ include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
         <hr>
 
         <div id="totalAmount">
-            <h2>Total Donations (last 30 days)</h2>
+            <h2 style="margin:2rem 0 1rem 0;">Total Donations (last 30 days)</h2>
             <div style="width: 950px; margin: 0 auto;">
                 <canvas id="totalAmountChart" width=500></canvas>
             </div>
         </div>
 
         <div id="donationsByDate" style="display: none;">
-            <h2>Total contributors (last 30 days)</h2>
+            <h2 style="margin:2rem 0 1rem 0;">Total contributors (last 30 days)</h2>
             <div style="width: 950px; margin: 0 auto;">
                 <canvas id="donationsByDateChart"></canvas>
             </div>
         </div>
 
         <div id="campaigns" style="display: none;">
-            <h2>Campaigns Performance (last 30 days)</h2>
+            <h2 style="margin:2rem 0 1rem 0;">Campaigns Performance (last 30 days)</h2>
             <div style="width: 470px; margin: 0 auto;">
                 <canvas id="campaignsChart"></canvas>
             </div>
