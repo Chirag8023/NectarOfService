@@ -81,13 +81,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 <title>Admin Campaigns</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
-<body class="main-body">
+<body class="main-body admin-campaigns">
 
     <?php include ADMIN_CAMPAIGNS_BASE_PATH . 'admin_header.php'; ?>
 
     <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
 
-        <h2>Add New Campaign</h2>
+        <h1>Add Campaign</h1>
         <form method="post" enctype="multipart/form-data">
             <input type="hidden" name="action" value="add">
             <label for="title">Title:</label>
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 
         <hr>
 
-        <h1>End Fundraising Campaigns</h1>
+        <h1>End Campaign</h1>
 
         <?php
 $sql = "SELECT id, title, created_at FROM fundraising_campaigns WHERE goal > current_amount";
@@ -111,10 +111,10 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<form method='post'>";
+        echo "<form method='post' style='display:flex; justify-content:space-around; align-items:center; font-size:1.3rem; margin-top:2rem;'>";
         echo "<input type='hidden' name='action' value='end'>";
         echo "<input type='hidden' name='end_campaign_id' value='" . $row["id"] . "'>";
-        echo "<p>Name: " . $row["title"]. " - Date: " . $row["created_at"]. " <button type='submit'>End Campaign</button></p>";
+        echo "<p>" . $row["title"]. "</p> <p> Started: " . $row["created_at"]. "</p> <button type='submit'>End Campaign</button>";
         echo "</form>";
     }
 } else {

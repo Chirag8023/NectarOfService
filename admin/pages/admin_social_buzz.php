@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
-        <h2>Update URL for ID</h2>
+        <h1>Update Tweets</h1>
         <form method="post">
             ID:
             <input type="number" name="id" min="1" max="6" required><br><br>

@@ -60,7 +60,7 @@ try {
 }
 ?>
 
-<title>Donation Records Download</title>
+<title>Admin Donations</title>
 <link rel="stylesheet" href="http://localhost/nectarofservice/admin/admin_style.css">
 
 <body class="main-body">
@@ -69,7 +69,7 @@ try {
 
     <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
-        <h2>Donation Records</h2>
+        <h1>Download Records</h1>
         <p>Download records within date range.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="from_date">From Date:</label>
