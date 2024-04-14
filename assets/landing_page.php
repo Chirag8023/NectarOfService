@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
-<title> Nectar of Service </title>
+<title> NectarOfService </title>
 <body class='body'>
     <?php include 'header.php'; ?>
     <div style="

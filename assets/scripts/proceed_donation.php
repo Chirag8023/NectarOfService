@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["csrf_token"]) && isset
 
                     $to = $email;
                     $subject = "Thank you for your contribution";
-                    $body = "Dear $donor_name,\n\nThank you for your contribution of ₹ $amount/- to the $campaign_name campaign. Your support is greatly appreciated.\n\nSincerely,\nNectar of Service Team";
+                    $body = "Dear $donor_name,\n\nThank you for your contribution of ₹ $amount/- to the $campaign_name campaign. Your support is greatly appreciated.\n\nSincerely,\nNectarOfService Team";
                       
                     $headers = "From: NectarOfService@gmail.com\r\n";
                     $headers .= "Return-Path: NectarOfService@gmail.com\r\n";
