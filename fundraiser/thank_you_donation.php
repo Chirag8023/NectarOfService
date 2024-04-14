@@ -16,22 +16,22 @@ if(!isset($_SESSION['chi_receipt_number'])) {
 
 <body class="body">
     <div class="thank-you-container">
-
-        <h1>
-            Thank you for your donation
+        <div>
+            <a href='http://localhost/NectarOfService/assets/scripts/generate_receipt.php' style="color:#000;">
+                <button id="receipt-icon">Download<br>Receipt</button></a>
+        </div>
+        <div>
+        <h1 style="margin-bottom:0;">
+            Thank you
         </h1>
         <p>Dear <?php echo $_SESSION['chi_donor_name']; ?>,</p>
-        <p>Thank you for your contribution to the <?php echo $_SESSION['chi_campaign_name']; ?> campaign. Your support
+        <p>We received your amount to the <?php echo $_SESSION['chi_campaign_name']; ?> campaign.<br> Your support
             is greatly appreciated.<br><br>
             Sincerely,<br>
-            Nectar of Service Team</p>
+            NectarOfService Team</p>
 
-        <br>
-        <div>
-            <a href='http://localhost/NectarOfService/assets/scripts/generate_receipt.php'><button
-                    class="header-button">Download Receipt</button></a>
-            <br><br>
-            Already downloaded ? Go back to <a href='http://localhost/NectarOfService/assets/landing_page.php'>Home</a>
+            <br>
+            Already downloaded ? Go back to <a href='http://localhost/NectarOfService/assets/landing_page.php' style="color:#000;">Home</a>
         </div>
     </div>
 

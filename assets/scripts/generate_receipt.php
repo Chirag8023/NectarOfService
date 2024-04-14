@@ -4,9 +4,15 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 require('fpdf/fpdf.php');
 
+if(isset($_SESSION['chi_donor_name']) && isset($_SESSION['chi_date']) && isset($_SESSION['chi_receipt_number']) && isset($_SESSION['chi_amount']))
+{
 // Generating the receipt PDF
 generateReceipt($_SESSION['chi_donor_name'], $_SESSION['chi_date'], $_SESSION['chi_receipt_number'], $_SESSION['chi_amount']);
-
+} else
+{
+    header("Location: http://localhost/NectarOfService/assets/404.php");
+    exit;
+}
 
 // Function to generate the receipt PDF
 function generateReceipt($name, $date, $receiptNo, $amount) {
@@ -44,7 +50,7 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(0, 10, 'Sincerely,', 0, 1, 'L');
     $pdf->Cell(0, 10, 'Vice Chairman', 0, 1, 'L');
-    $pdf->Cell(0, 10, 'Nectar Of Service', 0, 1, 'L');
+    $pdf->Cell(0, 10, 'NectarOfService', 0, 1, 'L');
 
     // Output the PDF to the browser
     $pdf->Output('D', 'receipt.pdf');
