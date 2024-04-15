@@ -30,11 +30,11 @@ include ADMIN_MAIN_BASE_PATH .'../assets/scripts/auth_check.php';
             style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; margin-bottom:0.5rem;">
             <h1>Analytics</h1>
             <div>
-                <button onclick="show('totalAmount')" style="background:#03DAC655; color:#000; font-weight:600;">Show
+                <button onclick="show('totalAmount')" style="background:#03DAC655; color:#111; font-weight:600; font-size:1rem;">Show
                     Total Donations</button>
                 <button onclick="show('donationsByDate')"
-                    style="background:#6200EAAA; color:#000; font-weight:600;">Show Total Contributors</button>
-                <button onclick="show('campaigns')" style="background:#FF408199; color:#000; font-weight:600;">Show
+                    style="background:#6200EA88; color:#111; font-weight:600; font-size:1rem;">Show Total Contributors</button>
+                <button onclick="show('campaigns')" style="background:#FF408199; color:#111; font-weight:600; font-size:1rem;">Show
                     Campaigns Performance</button>
             </div>
         </div>
