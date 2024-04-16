@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include ADMIN_SOCIAL_BUZZ_BASE_PATH . 'admin_header.php'; ?>
 
     <main class="main-content" style="width:100vw; border-left:4px solid #000">
-
+        <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
         <h1>Update Tweets</h1>
         <form method="post" class="admin-panel-forms">
             <label>Slot:</label>
