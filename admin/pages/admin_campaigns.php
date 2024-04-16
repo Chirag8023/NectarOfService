@@ -111,10 +111,10 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<form method='post' style='display:flex; flex-direction:row; width:100%; justify-content:space-around; align-items:center; font-size:1.3rem; margin-top:2rem;'>";
+        echo "<form method='post' style='display:flex; flex-direction:row; width:90%; margin:auto; align-items:center; font-size:1.3rem; margin-top:2rem;'>";
         echo "<input type='hidden' name='action' value='end'>";
         echo "<input type='hidden' name='end_campaign_id' value='" . $row["id"] . "'>";
-        echo "<p>" . $row["title"]. "</p> <p> Started: " . $row["created_at"]. "</p> <button type='submit'>End Campaign</button>";
+        echo "<p style='flex:1;'>" . $row["title"]. "</p> <p style='flex:1;'> Started: " . $row["created_at"]. "</p> <button type='submit'>End Campaign</button>";
         echo "</form>";
     }
 } else {
@@ -133,7 +133,7 @@ if (isset($_SESSION['chi_error'])) {
     unset($_SESSION['chi_error']);
 }
 if (isset($_SESSION['chi_success'])) {
-    echo '<div style="color:green;">' . $_SESSION['chi_success'] . '</div>';
+    echo '<div style="color:green; font-weight:600;">' . $_SESSION['chi_success'] . '</div>';
     unset($_SESSION['chi_success']);
 }
 ?>
