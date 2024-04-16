@@ -71,7 +71,7 @@ try {
 
         <h1>Download Records</h1>
         <p>Download records within date range.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="admin-panel-forms">
             <label for="from_date">From Date:</label>
             <input type="date" id="from_date" name="from_date" required>
             <label for="to_date">To Date:</label>

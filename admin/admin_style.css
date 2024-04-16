@@ -211,7 +211,27 @@ input[type="submit"]:active {
     padding: 1rem 3rem;
     font-size: 1.4rem;
 }
+/**/
+.admin-panel-forms {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+.admin-panel-forms input,textarea {
+    margin-top: 0.5rem;
+    font-family: 'inter';
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight:500;
+}
 
+.admin-panel-forms label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/**/
 /*status_checker*/
 .status-indicator {
     display: flex;
@@ -277,7 +297,7 @@ input[type="submit"]:active {
     left: 0;
     height: 6.9vh;
     width: 100%;
-    background-color: #d8f5ff;
+    background-color: #fff3f5;
     border-radius: 0;
     border-bottom: 4px solid black;
     border-right: 4px solid black;

@@ -55,10 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="main-content" style="width:100vw; border-left:4px solid #000">
 
         <h1>Update Tweets</h1>
-        <form method="post">
-            ID:
+        <form method="post" class="admin-panel-forms">
+            <label>Slot:</label>
             <input type="number" name="id" min="1" max="6" required><br><br>
-            New URL:
+            <label>Tweet Url:</label>
             <input type="text" name="new_url" required><br><br>
             <input type="submit" name="submit" value="Update">
         </form>

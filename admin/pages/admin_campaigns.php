@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
     <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
 
         <h1>Add Campaign</h1>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" class="admin-panel-forms">
             <input type="hidden" name="action" value="add">
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" required><br><br>
@@ -111,7 +111,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<form method='post' style='display:flex; justify-content:space-around; align-items:center; font-size:1.3rem; margin-top:2rem;'>";
+        echo "<form method='post' style='display:flex; flex-direction:row; width:100%; justify-content:space-around; align-items:center; font-size:1.3rem; margin-top:2rem;'>";
         echo "<input type='hidden' name='action' value='end'>";
         echo "<input type='hidden' name='end_campaign_id' value='" . $row["id"] . "'>";
         echo "<p>" . $row["title"]. "</p> <p> Started: " . $row["created_at"]. "</p> <button type='submit'>End Campaign</button>";
