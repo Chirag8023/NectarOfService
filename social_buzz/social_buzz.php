@@ -23,6 +23,15 @@
             </div>
         </div>
     </div>
+    
+    <div id="social-buzz-middle">
+        <h1 style="text-align:left;">Looking for <span style="color:#ef0028">Volunteer Opportunities ?</span> well, you're welcome in our community.</h1>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin:4rem 0;">
+    <iframe src="https://e.widgetbot.io/channels/1230099532336070656/1230099532336070659" allow="clipboard-write; fullscreen" height="500" width="1000"></iframe>    
+    </div>
+
     <script src="http://localhost/NectarOfService/assets/scripts/social_buzz_script.js"></script>
 </body>
 <?php include '../assets/footer.php'; ?>
