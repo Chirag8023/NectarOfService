@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
         <h1>Compose Newsletter</h1>
         <form method="post" class="admin-panel-forms">
-            <textarea name="newsletter_content" rows="10" cols="100" required></textarea>
+            <textarea name="newsletter_content" rows="10" cols="100" placeholder="start writing here..." required></textarea>
             <br>
             <input type="submit" value="Send Newsletter">
             <br>

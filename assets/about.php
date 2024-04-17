@@ -4,7 +4,7 @@
 <body class="body">
     <?php include 'header.php'; ?>
     <div style="
-    margin-top:5rem; font-family:'inter'; font-size:23px; padding:3rem; color:#000;">
+    margin-top:5rem; font-family:'inter'; font-size:23px; padding:3rem; color:#000; text-align:justify;">
         <h1>About Us</h1>
         <p>Welcome to NectarOfService, A centralized donation platform dedicated to supporting organization in creating,
             managing, and tracking donation campaigns. Inspired by the remarkable accomplishment of The Akshaya Patra Foundation,
@@ -12,7 +12,9 @@
             to facilitate partnerships between organizations and society to achieve impactful goals.</p>
         <h2>Our Mission</h2>
         <p>At NectarOfService, our mission is to provide a user-friendly platform that empowers organization to connect with
-            donors and make a meaningful difference in society. We draw our inspiration from ISKCON Bangalore, where HG Madhu Pandit Dasa, President of ISKCON Bangalore and founder of The Akshaya Patra Foundation, has shown that large-scale feeding can be achieved through collaboration with the government, in alignment with the UN Sustainable Development Goal of zero hunger.</p>
+            donors and make a meaningful difference in society. We draw our inspiration from ISKCON Bangalore, where HG Madhu Pandit Dasa, 
+            President of ISKCON Bangalore and founder of The Akshaya Patra Foundation, has shown how large-scale feeding can be achieved 
+            through collaboration with the government, in alignment with the UN Sustainable Development Goal of zero hunger.</p>
         <h3><li>Simplifying Donations</h3>
         <p>We strive to make the donation process as simple and accessible as possible for both organizations and donors. Our
             platform offers a range of features to help organizations create and manage campaigns, track donations, and engage

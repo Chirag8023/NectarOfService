@@ -93,8 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" required><br><br>
             <label for="description">Description:</label>
-            <textarea name="description" id="description" required></textarea><br><br>
-            <label for="goal">Goal:</label>
+            <textarea name="description" id="description" rows="5" cols="100" required></textarea><br><br>
+            <label for="goal">Goal:(Rs.)</label>
             <input type="number" name="goal" id="goal" min="1" required><br><br>
             <label for="image">Image:</label>
             <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/webp" required><br><br>
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 
         <hr>
 
-        <h1>End Campaign</h1>
+        <h1>Ongoing Campaigns</h1>
 
         <?php
 $sql = "SELECT id, title, created_at FROM fundraising_campaigns WHERE goal > current_amount";
