@@ -15,10 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.data === "payment_success") {
       console.log("Payment successful!");
       document.getElementById("donationForm").submit();
-    } else {
-      console.log("Payment failed!");
-      alert("Payment process failed. Please try again.");
-    }
+    } 
   });
 
   document.getElementById("donateButton").addEventListener("click", (event) => {
