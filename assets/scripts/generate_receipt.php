@@ -34,7 +34,7 @@ function generateReceipt($name, $date, $receiptNo, $amount) {
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->Cell(0, 10, 'Tax Information:', 0, 1);
     $pdf->SetFont('Arial', '', 12);
-    $pdf->Cell(0, 10, 'This donation is eligible for deduction under Section 80D of the Income Tax Act.', 0, 1);
+    $pdf->Cell(0, 10, 'This donation is eligible for deduction under Section 80G of the Income Tax Act.', 0, 1);
 
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->Cell(0, 10, 'Impact of Your Donation:', 0, 1);

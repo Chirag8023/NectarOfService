@@ -6,7 +6,7 @@
         <?php include "../assets/header.php"; ?>
         <div class="main-area">
             <h2>Ongoing Campaigns</h2>
-            <p style="color:#000; margin-top:-1.2rem; font-weight:600; font-size:1.2rem;">*All campaigns are eligible for 80D tax
+            <p style="color:#000; margin-top:-1.2rem; font-weight:600; font-size:1.2rem;">*All campaigns are eligible for 80G tax
                 benefits.</p>
             <br>
             <div id="campaignContent">
