@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             donation.name +
             "<br>Donated: ₹ " +
             donation.amount +
-            "/- in<br>" +
+            "/- in " +
             donation.campaign_name +
             "<br><br>" +
             donation.donation_time +

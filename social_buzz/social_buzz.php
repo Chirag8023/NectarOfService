@@ -25,7 +25,7 @@
     </div>
     
     <div id="social-buzz-middle">
-        <h1 style="text-align:left;">Looking for <span style="color:#ef0028">Volunteer Opportunities ?</span> well, you're welcome in our community.</h1>
+        <h1 style="text-align:left;">Looking for <span style="color:#ef0028">Volunteer Opportunities ?</span> anytime check out our Volunteer Hub.</h1>
     </div>
 
     <div style="display: flex; justify-content: center; margin:4rem 0;">
