@@ -149,6 +149,7 @@ input[type="submit"]:active {
     width: 57.5%;
     padding: 0.5rem;
     top: 0;
+    font-weight: 720;
     margin: 1rem;
 }
 
@@ -202,7 +203,7 @@ input[type="submit"]:active {
 }
 
 .login-container button {
-    font-weight: 600;
+    font-weight: 610;
     padding: 1rem 3rem;
     font-size: 1.4rem;
 }
