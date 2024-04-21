@@ -10,18 +10,27 @@ if (isset($_SESSION['chi_username'])) {
     exit;
 }
 
-// Defined an array of usernames and hashed passwords
-$users = array(
-    'admin1' => '$2y$10$Y7EWRGs3cw4Hx2Dnx7bPRu59k5dqUjUAwi0x2MOdET9bdy0LiQvzm', // Password is "password1"
-    'admin2' => '$2y$10$ZIldSIvqeOmft4ORq5MAjuttW47rymuTjl7NYit4lUwMft4HJ04Ty'  // Password is "password2"
-);
+define('ADMIN_LOGIN_BASE_PATH', dirname(__FILE__) . '/');
+include ADMIN_LOGIN_BASE_PATH .'../assets/scripts/dbconnect.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    // sanaitize input
+    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
-    if (array_key_exists($username, $users)) {
-        if (password_verify($password, $users[$username])) {
+    // Prepare SQL statement to select user with given username
+    $stmt = $conn->prepare("SELECT * FROM admins WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $stored_password_hash = $row['password_hash'];
+        //verify password
+        if (password_verify($password, $stored_password_hash)) {
             // Setting the session variable to the username
             $_SESSION['chi_username'] = $username;
 
