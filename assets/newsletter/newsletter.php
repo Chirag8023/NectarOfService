@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
             } 
         }
         else {
-            $_SESSION['chi_success_message'] = "See you soon!";
+            $_SESSION['chi_success_message'] = "Thank you for subscribing!";
         }
         $stmt->close();
     } else{
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
     <div>
         <p>Get updates about how your contributions are making impact!</p>
         <?php if (isset($_SESSION['chi_success_message'])) { ?>
-        <p style="color: rgb(255, 255, 255);"><?php echo $_SESSION['chi_success_message']; ?></p>
+        <p style="color: #c02;"><?php echo $_SESSION['chi_success_message']; ?></p>
         <script>
         window.onload = function() {
             let newsletterSection = document.querySelector('.newsletter');
