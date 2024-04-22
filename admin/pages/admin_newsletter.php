@@ -33,7 +33,7 @@ function sendNewsletter($conn, $newsletter_content) {
 
             // Sending email
             if(!mail($to, $subject, $message, $headers)) {
-                throw new Exception('Email could not be sent.');
+                throw new Exception('Unable to send email.');
             }
         }
     } else {
@@ -48,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         sendNewsletter($conn, $_POST['newsletter_content']);
-        $_SESSION['chi_success_message'] = 'Email sent successfully.';
+        $_SESSION['chi_success'] = 'Email sent successfully.';
     } catch (Exception $e) {
-        $_SESSION['chi_error_message'] = $e->getMessage();
+        $_SESSION['chi_error'] = $e->getMessage();
     }
 
     // Redirecting to prevent form resubmission
@@ -66,23 +66,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php include ADMIN_NEWSLETTER_BASE_PATH . 'admin_header.php'; ?>
 
-    <main class="main-content" style="width:100vw; border-left:4px solid #000">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
         <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
-        <h1>Compose Newsletter</h1>
+        <h1 style="margin: 0rem 0 2rem 0;">Compose Newsletter</h1>
         <form method="post" class="admin-panel-forms">
             <textarea name="newsletter_content" rows="10" cols="100" placeholder="start writing here..." required></textarea>
             <br>
             <input type="submit" value="Send Newsletter">
-            <br>
-            <?php if(isset($_SESSION['chi_success_message'])) { ?>
-            <p style="color:green">
-                <?php echo $_SESSION['chi_success_message']; unset($_SESSION['chi_success_message']); ?></p>
-            <?php } ?>
-            <?php if(isset($_SESSION['chi_error_message'])) { ?>
-            <p style="color:red"><?php echo $_SESSION['chi_error_message']; unset($_SESSION['chi_error_message']); ?>
-            </p>
-            <?php } ?>
         </form>
-
     </main>
+
+    <?php include ADMIN_NEWSLETTER_BASE_PATH .'admin_message_bar.php';?>
+    
 </body>

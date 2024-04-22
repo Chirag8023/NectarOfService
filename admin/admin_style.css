@@ -233,7 +233,6 @@ input[type="submit"]:active {
     padding: 2rem;
     font-size: 1.5rem;
     width: 100%;
-    margin-bottom: 5rem;
 }
 
 /**/
@@ -296,7 +295,7 @@ input[type="submit"]:active {
 }
 
 /**/
-.admin_campaign_message_bar {
+.admin_message_bar {
     grid-column: 1 / -1;
     bottom: 0rem;
     left: 0;
@@ -313,10 +312,9 @@ input[type="submit"]:active {
     padding-left: 1rem;
 }
 
-.admin_campaign_message_bar p {
-    color: black;
-    font-weight: 600;
+.admin_message_bar img {
     border-right: 4px solid black;
+    padding: 0.5rem 0;
     height: 100%;
     display: flex;
     align-items: center;

@@ -27,7 +27,7 @@ try {
         $toDate = $toDate->format('Y-m-d');
         
         if ($fromDate > $toDate) {
-            $_SESSION['chi_error'] = "Error: From Date cannot be greater than To Date.";
+            $_SESSION['chi_error'] = "\"From Date\" should not be greater than \"To Date\".";
             header("Location: " . $_SERVER["PHP_SELF"]);
             exit();
         } else {
@@ -67,20 +67,19 @@ try {
 
     <?php include ADMIN_DONATIONS_BASE_PATH . 'admin_header.php'; ?>
 
-    <main class="main-content" style="width:100vw; border-left:4px solid #000">
+    <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
         <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
-        <h1>Download Records</h1>
-        <p>Download records within date range.</p>
+        <h1 style="margin: 0rem 0 1rem 0;">Download Records</h1>
+        <p style="text-align:center;">Please select the  date range.</p><br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="admin-panel-forms">
             <label for="from_date">From Date:</label>
-            <input type="date" id="from_date" name="from_date" required>
+            <input type="date" id="from_date" name="from_date" required><br><br>
             <label for="to_date">To Date:</label>
-            <input type="date" id="to_date" name="to_date" required>
+            <input type="date" id="to_date" name="to_date" required><br><br>
             <button type="submit" name="submit">Generate CSV</button>
-            <?php if (isset($_SESSION['chi_error'])) { ?>
-            <p style="color:red"><?php echo $_SESSION['chi_error']; unset($_SESSION['chi_error']); ?></p>
-            <?php } ?>
         </form>
-
     </main>
+
+    <?php include ADMIN_DONATIONS_BASE_PATH .'admin_message_bar.php';?>
+    
 </body>

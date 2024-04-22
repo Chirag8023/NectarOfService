@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 
     <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
         <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
-        <h1>Add Campaign</h1>
+        <h1 style="margin: 0rem 0 2rem 0;">Add Campaign</h1>
         <form method="post" enctype="multipart/form-data" class="admin-panel-forms">
             <input type="hidden" name="action" value="add">
             <label for="title">Title:</label>
@@ -100,10 +100,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
             <input type="file" name="image" id="image" accept="image/jpeg,image/png,image/webp" required><br><br>
             <input type="submit" value="Create Campaign">
         </form>
-
+        <br><br>
         <hr>
-
-        <h1>Ongoing Campaigns</h1>
+        <h1 style="margin: 0rem 0 3rem 0;">Ongoing Campaigns</h1>
 
         <?php
 $sql = "SELECT id, title, created_at FROM fundraising_campaigns WHERE goal > current_amount";
@@ -124,20 +123,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
     </main>
-
-    <div class="admin_campaign_message_bar">
-        <p>Message:</p>
-        <?php
-if (isset($_SESSION['chi_error'])) {
-    echo '<div style="color:#ff0037; font-weight:600;">' . $_SESSION['chi_error'] . '</div>';
-    unset($_SESSION['chi_error']);
-}
-if (isset($_SESSION['chi_success'])) {
-    echo '<div style="color:green; font-weight:600;">' . $_SESSION['chi_success'] . '</div>';
-    unset($_SESSION['chi_success']);
-}
-?>
-    </div>
-
+    
+    <?php include ADMIN_CAMPAIGNS_BASE_PATH .'admin_message_bar.php';?>
 
 </body>
