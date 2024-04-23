@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <title> NectarOfService </title>
+
 <body class='body'>
     <?php include 'header.php'; ?>
     <div style="
@@ -24,7 +25,6 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
     <div class="backlines">
         <p>ate inspire contribute donate inspire contribute<br>ontribute donate inspire contribute</p>
     </div>
-
     <div style="margin-bottom:1rem;">
 
         <?php include 'terminal_stats/terminal_stats.php'; ?>
