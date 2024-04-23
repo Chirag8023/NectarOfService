@@ -67,6 +67,7 @@ textarea::-webkit-scrollbar-thumb:active {
 
 .left-section h1 {
 	font-family: 'Bungee';
+	font-weight: 100;
 	line-height: 1.5;
 	font-size: 3.5rem;
 }
@@ -108,7 +109,7 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 .backlines {
-	margin-top: -7rem;
+	margin-top: -8rem;
 	margin-left: -0.5rem;
 	line-height: 6rem;
 	white-space: nowrap;
@@ -116,7 +117,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	font-size: 4rem;
 	max-width: 100%;
 	font-weight: bold;
-	color: #ccc;
+	color: #ccc9;
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
@@ -602,7 +603,7 @@ a:hover {
 }
 
 .newsletter {
-	background: #0000;
+	background: #eaeaea;
 	text-align: center;
 	align-items: center;
 	justify-content: space-around;
