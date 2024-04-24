@@ -29,7 +29,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
     <div class="terminal-section">
         <?php include 'terminal_stats/terminal_stats.php'; ?>
         <div class="red-indicator"></div>
-        <p style="flex:1; font-family:'inter'; font-weight:700; font-size:2rem; margin:0;">Live Terminal count and update <br>every donation happening<br> on platform </p>
+        <p style="flex:1; font-family:'inter'; font-weight:700; font-size:2rem; margin:0;">Join the movement!<br><br> Every donation counts towards goal of making a difference.</p>
     </div>
     
     <?php include 'newsletter/newsletter.php'; ?>
