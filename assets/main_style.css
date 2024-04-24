@@ -68,13 +68,14 @@ textarea::-webkit-scrollbar-thumb:active {
 .left-section h1 {
 	font-family: 'Bungee';
 	font-weight: 100;
-	text-shadow: -0.2rem 0.2rem #fff6;
+	text-shadow: -0.2rem 0.2rem #0006;
 	line-height: 1.5;
 	font-size: 3.5rem;
 }
 
 .left-section p {
 	margin-top: -25px;
+	text-shadow: -0.1rem 0.1rem #0006;
 	margin-bottom: 1.5rem;
 	font-weight: bold;
 	font-size: 1.2rem;
@@ -96,7 +97,7 @@ textarea::-webkit-scrollbar-thumb:active {
 	background-color: #fff;
 	color: black;
 	border: 2px solid black;
-	box-shadow: -7px 7px 0px #000;
+	box-shadow: -7px 7px 0px #0006;
 	border-radius: 1px;
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -105,21 +106,6 @@ textarea::-webkit-scrollbar-thumb:active {
 	background-color: #000;
 	color: #fff;
 	box-shadow: 0px 0px #000;
-}
-
-.backlines {
-	margin-top: -8rem;
-	margin-left: -0.5rem;
-	line-height: 6rem;
-	white-space: nowrap;
-	font-family: 'Bungee Outline';
-	font-size: 4rem;
-	max-width: 100%;
-	font-weight: bold;
-	color: #ccc9;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
 }
 
 .footer {
