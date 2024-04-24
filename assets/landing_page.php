@@ -4,7 +4,7 @@
 <body class='body'>
     <?php include 'header.php'; ?>
     <div style="
-      background-image:url(http://localhost/NectarOfService/assets/images/landing.svg); background-size:cover;
+      background-image:url(http://localhost/NectarOfService/assets/images/duotone.png); background-size:cover;
 margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px solid black;">
         <div class="main-container">
             <!-- Left section -->
