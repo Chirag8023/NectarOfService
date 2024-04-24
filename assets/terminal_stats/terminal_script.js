@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
           "Overall Stats:\n\n" +
           "> Total Donations:  ₹ " +
           data.total_donations +
-          "/-\n > Total Campaigns: " +
+          "/-\n\n > Total Campaigns: " +
           data.total_campaigns +
-          "\n > Total Contributors: " +
+          "\n\n > Total Contributors: " +
           data.total_donors;
         var secondHalf =
           "Current Month Stats:\n\n" +
           "> Total Donations:  ₹ " +
           data.total_donation_this_month +
-          "/-\n > Total Campaigns: " +
+          "/-\n\n > Total Campaigns: " +
           data.total_campaigns_this_month +
-          "\n > Total Contributors: " +
+          "\n\n > Total Contributors: " +
           data.total_donors_this_month;
 
         typeAndBackspace(terminalText, firstHalf, function () {

@@ -8,7 +8,7 @@
                 <div class="terminal-button minimize-button"></div>
                 <div class="terminal-button maximize-button"></div>
             </div>
-            <p>root@user:~/community</p>
+            <p>root@user:~/LiveCount</p>
         </div>
 
 

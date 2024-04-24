@@ -23,13 +23,16 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         </div>
     </div>
     
-    <h1 style="display: flex; justify-content: center; font-family: 'bungee'; font-weight: 100; text-shadow: 0rem 0.25rem #ffc900bb; font-size: 3.5rem; margin:0;">
+    <h1 style="display: flex; justify-content: center; font-family: 'bungee'; font-weight: 100; text-shadow: 0rem 0.25rem #ffc900aa; font-size: 3.5rem; margin-bottom:0;">
         The world is yours to build
     </h1>
-
+    <div class="terminal-section">
         <?php include 'terminal_stats/terminal_stats.php'; ?>
-        
-        <?php include 'newsletter/newsletter.php'; ?>
+        <div class="red-indicator"></div>
+        <p style="flex:1; font-family:'inter'; font-weight:700; font-size:2rem; margin:0;">Live Terminal count and update <br>every donation happening<br> on platform </p>
+    </div>
+    
+    <?php include 'newsletter/newsletter.php'; ?>
 
     <?php include 'footer.php'; ?>
 </body>
