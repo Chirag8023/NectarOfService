@@ -23,7 +23,6 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         </div>
     </div>
     
-    <div>
     <h1 style="display: flex; justify-content: center; font-family: 'bungee'; font-weight: 100; text-shadow: 0rem 0.25rem #ffc900bb; font-size: 3.5rem; margin:0;">
         The world is yours to build
     </h1>
