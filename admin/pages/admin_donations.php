@@ -19,7 +19,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $error = '';
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['from_date']) && isset($_POST['to_date'])) {
         $fromDate = $_POST['from_date'];
         // Creating DateTime object from $toDate and add one day to include that day too
         $toDate = new DateTime($_POST['to_date']);
@@ -27,7 +27,7 @@ try {
         $toDate = $toDate->format('Y-m-d');
         
         if ($fromDate > $toDate) {
-            $_SESSION['chi_error'] = "\"From Date\" should not be greater than \"To Date\".";
+            $_SESSION['chi_error'] = "\"Start Date\" must be before the \"End Date\".";
             header("Location: " . $_SERVER["PHP_SELF"]);
             exit();
         } else {
@@ -70,11 +70,11 @@ try {
     <main class="main-content" style="width:100vw; border-left:4px solid #000;max-height:80vh;">
         <a href="http://localhost/nectarofservice/admin/admin_main.php" style="position:absolute; color:#000; font-size:1.2rem; text-decoration:none; border-bottom:2px solid black;"> « Back</a>
         <h1 style="margin: 0rem 0 1rem 0;">Download Records</h1>
-        <p style="text-align:center;">Please select the  date range.</p><br>
+        <p style="text-align:center;">Select the date range to download donation records.</p><br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="admin-panel-forms">
-            <label for="from_date">From Date:</label>
+            <label for="from_date">Start Date:</label>
             <input type="date" id="from_date" name="from_date" required><br><br>
-            <label for="to_date">To Date:</label>
+            <label for="to_date">End Date:</label>
             <input type="date" id="to_date" name="to_date" required><br><br>
             <button type="submit" name="submit">Generate CSV</button>
         </form>
