@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $stored_password_hash = $row['password_hash'];
         //verify password
+        // admin1 - password1
+        // admin2 - password2
         if (password_verify($password, $stored_password_hash)) {
             // Setting the session variable to the username
             $_SESSION['chi_username'] = $username;

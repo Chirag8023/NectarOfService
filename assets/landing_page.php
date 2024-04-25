@@ -29,7 +29,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
     <div class="terminal-section">
         <?php include 'terminal_stats/terminal_stats.php'; ?>
         <div class="red-indicator"></div>
-        <p style="flex:1; font-family:'inter'; font-weight:700; font-size:2rem; margin:0;">Join the movement!<br><br> Every donation counts towards goal of making a difference.</p>
+        <p style="flex:1; font-weight:700; font-size:2rem;">Join the movement!<br><br> Every donation counts towards goal of making a difference.<br><br><a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php"><button style="padding:0.8rem 2rem; font-size:1.6rem; font-weight:700;" class="header-button"> Make Difference </button></a></p>
     </div>
     
     <?php include 'newsletter/newsletter.php'; ?>
