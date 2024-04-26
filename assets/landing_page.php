@@ -23,9 +23,10 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         </div>
     </div>
     
-    <h1 style="display: flex; justify-content: center; font-family: 'bungee'; font-weight: 100; text-shadow: 0rem 0.25rem #ffc900aa; font-size: 3.5rem; margin-bottom:0;">
-        The world is yours to build
+    <h1 style="text-align:right; font-family: 'Inter'; font-weight: 700; font-size: 2.5rem; margin:4rem ;">
+    Welcome to <span style="color:#ef0028;">NectarOfService</span>, Inspired by <br> real-world impact stories, we aim to <br> simplify the ability to donate. 
     </h1>
+    
     <div class="terminal-section">
         <?php include 'terminal_stats/terminal_stats.php'; ?>
         <div class="red-indicator"></div>
