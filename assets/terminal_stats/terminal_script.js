@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function fetchStatsEntries() {
     return fetch(
-      "http://localhost/NectarOfService/assets/terminal_stats/get_terminal_stats_data.php"
+      "http://localhost/NectarOfService/assets/scripts/get_terminal_stats_data.php"
     )
       .then((response) => {
         if (!response.ok) {

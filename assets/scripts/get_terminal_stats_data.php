@@ -1,5 +1,5 @@
 <?php
-include "../scripts/dbconnect.php"; 
+include "dbconnect.php"; 
 
 // total donations from fundraising_campaigns
 $sql_total_donations = "SELECT SUM(current_amount) AS total_donations FROM fundraising_campaigns";
