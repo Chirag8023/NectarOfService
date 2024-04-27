@@ -1,44 +1,3 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-define('NEWSLETTER_BASE_PATH', dirname(__FILE__) . '/');
-include NEWSLETTER_BASE_PATH.'../scripts/dbconnect.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && isset($_POST["subscriber_email"])) {
-    $subscriber_name = filter_var(trim($_POST["subscriber_name"]), FILTER_SANITIZE_STRING);
-    $subscriber_email = filter_var(trim($_POST["subscriber_email"]), FILTER_SANITIZE_EMAIL);
-
-    if (filter_var($subscriber_email, FILTER_VALIDATE_EMAIL)) {
-        $stmt = $conn->prepare("SELECT id FROM newsletter_subscribers WHERE email = ?");
-        $stmt->bind_param("s", $subscriber_email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        
-        if ($result->num_rows == 0) {
-            $stmt = $conn->prepare("INSERT INTO newsletter_subscribers (name, email) VALUES (?, ?)");
-            $stmt->bind_param("ss", $subscriber_name, $subscriber_email);
-
-            if ($stmt->execute()) {
-                $_SESSION['chi_success_message'] = "Thank you for subscribing!";
-            } 
-        }
-        else {
-            $_SESSION['chi_success_message'] = "Thank you for subscribing!";
-        }
-        $stmt->close();
-    } else{
-        $_SESSION['chi_success_message'] = "Something went wrong! Please Try again.";
-    }
-    
-    $conn->close();
-    
-    // Redirecting to prevent form resubmission
-    header("Location: {$_SERVER['PHP_SELF']}");
-    exit;
-}
-?>
-
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <div class="newsletter">
     <div>
@@ -46,25 +5,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscriber_name"]) && 
     </div>
     <div>
         <p>Get updates about how your contributions are making impact!</p>
-        <?php if (isset($_SESSION['chi_success_message'])) { ?>
-        <p style="color: #c02;"><?php echo $_SESSION['chi_success_message']; ?></p>
-        <script>
-        window.onload = function() {
-            let newsletterSection = document.querySelector('.newsletter');
-            if (newsletterSection) {
-                newsletterSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-        </script>
-        <?php unset($_SESSION['chi_success_message']); ?>
-        <?php } ?>
-        <form method="post">
+        <p id="successMessage" style="color: #c02;"></p>
+        <form id="newsletterForm">
             <input type="text" id="name" name="subscriber_name" placeholder="Name" required>
             <input type="email" id="email" name="subscriber_email" placeholder="Email" required>
             <button type="submit">&#8594;</button>
         </form>
     </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletterForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(form);
+
+        fetch('http://localhost/nectarofservice/assets/scripts/submit_newsletter.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                successMessage.textContent = data.message;
+                form.reset();
+                // deselect the input fields
+                form.querySelectorAll('input').forEach(input => input.blur());
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+
+});
+
+</script>
