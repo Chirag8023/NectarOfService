@@ -29,9 +29,15 @@
     </div>
 
     <div style="display: flex; justify-content: center; margin:4rem 0;">
-    <iframe src="https://e.widgetbot.io/channels/1230099532336070656/1230099532336070659" allow="clipboard-write; fullscreen" height="500" width="1000"></iframe>    
+    <widgetbot
+            server="1230099532336070656"
+            channel="1233362643751010315"
+            width="1000"
+            height="500"
+    ></widgetbot>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
     </div>
-
+    
     <script src="http://localhost/NectarOfService/assets/scripts/social_buzz_script.js"></script>
 </body>
 <?php include '../assets/footer.php'; ?>
