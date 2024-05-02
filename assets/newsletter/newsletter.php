@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="http://localhost/NectarOfService/assets/main_style.css">
 <div class="newsletter">
     <div>
-        <h2>Join<br>Newsletter</h2>
+        <h2>Join Newsletter</h2>
     </div>
     <div>
         <p>Get updates about how your contributions are making impact!</p>

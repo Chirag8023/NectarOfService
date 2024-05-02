@@ -23,9 +23,34 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         </div>
     </div>
     
-    <h1 style="text-align:right; font-family: 'Inter'; font-weight: 700; font-size: 2.5rem; margin:4rem ;">
-    Welcome to <span style="color:#ef0028;">NectarOfService</span>, Inspired by <br> real-world impact stories, we aim to <br> simplify the ability to donate. 
+    <h1 style="text-align:center; font-weight: 700; font-size: 2.7rem; margin:4rem auto;">
+    Welcome to <span style="color:#e02;">NectarOfService</span>, Inspired by <br> real-world impact stories, we aim to <br> simplify the ability to donate. 
     </h1>
+
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="http://localhost/NectarOfService/assets/images/1.png" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="http://localhost/NectarOfService/assets/images/2.png" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="http://localhost/NectarOfService/assets/images/3.png" alt="Slide 3">
+            </div>
+        </div>
+        <label for="carousel-3" class="carousel-control prev">&#10094;</label>
+        <label for="carousel-2" class="carousel-control next">&#10095;</label>
+    </div>
+
+    <div class="patron-section">
+        <div style="flex:1; padding:2rem;">
+            <h1 style="font-weight:700; font-size:2.5rem;">Founder Patron Program</h1>
+            <p style="font-weight:500; font-size:1.5rem;">Join our patron program today and be part of mission to serve.</p>
+        </div>
+        <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; margin:1rem;"><button class="patron-button">Become Patron →</button></a>
+    </div>
     
     <div class="terminal-section">
         <?php include 'terminal_stats/terminal_stats.php'; ?>
@@ -36,4 +61,5 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
     <?php include 'newsletter/newsletter.php'; ?>
 
     <?php include 'footer.php'; ?>
+    <script src="http://localhost/NectarOfService/assets/scripts/landing_page_carousel.js"></script>
 </body>
