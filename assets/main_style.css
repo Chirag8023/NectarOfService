@@ -221,19 +221,20 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 .patron-button {
+	display: flex;
 	font-family: 'inter';
-	box-shadow: none;
 	background: #ffc900;
 	font-weight: 700;
 	font-size: 1.5rem;
 	padding: 1.5rem 2rem;
 	border: 3px solid black;
-	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out, padding-right 0.2s ease-in-out;
 }
 
 .patron-button:hover {
 	background: #000;
 	color: #fff;
+	padding-right: 0;
 }
 
 /* footer */

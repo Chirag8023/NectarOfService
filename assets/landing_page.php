@@ -49,7 +49,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
             <h1 style="font-weight:700; font-size:2.5rem;">Founder Patron Program</h1>
             <p style="font-weight:500; font-size:1.5rem;">Join our patron program today and be part of mission to serve.</p>
         </div>
-        <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; margin:1rem;"><button class="patron-button">Become Patron →</button></a>
+        <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; margin:1rem; display:flex;"><button class="patron-button">Become Patron </button> <button class="patron-button" style="border-left:none; background:#000; color:#fff; font-size:3rem; padding:0 1rem;"><span style="transform:translateY(0.8rem);">↗</span></button></a>
     </div>
     
     <div class="terminal-section">
