@@ -40,8 +40,8 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
                 <img src="http://localhost/NectarOfService/assets/images/3.png" alt="Slide 3">
             </div>
         </div>
-        <label for="carousel-3" class="carousel-control prev">&#10094;</label>
-        <label for="carousel-2" class="carousel-control next">&#10095;</label>
+        <label for="carousel-3" class="carousel-control prev">←</label>
+        <label for="carousel-2" class="carousel-control next">→</label>
     </div>
 
     <div class="patron-section">

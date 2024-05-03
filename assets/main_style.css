@@ -178,11 +178,14 @@ textarea::-webkit-scrollbar-thumb:active {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: #0000;
+    color: #000;
     cursor: pointer;
-    padding: 10px;
+    padding: 100% 0.5rem;
+	font-weight: 900;
+	font-size: 2rem;
     z-index: 1;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .carousel-control.prev {
@@ -194,7 +197,8 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 .carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 
 @media screen and (min-width: 768px) {
