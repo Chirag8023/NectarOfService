@@ -45,7 +45,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         <label for="carousel-2" class="carousel-control next">→</label>
     </div>
 
-    <div style="margin:8rem 1.5rem 6rem 1.5rem; display:flex; flex-direction:column;">
+    <div style="margin: 5rem 1.5rem; display:flex; flex-direction:column;">
         <h1 style="font-size:2.5rem; line-height:1.3; text-align:center;">
             How is your donation utilized?
         </h1>
