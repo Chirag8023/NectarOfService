@@ -114,43 +114,6 @@ textarea::-webkit-scrollbar-thumb:active {
 	margin: 9rem auto 0 auto;
 }
 
-.terminal-section .red-indicator {
-	width: 1rem;
-	height: 1rem;
-	border-radius: 50%;
-	display: inline-block;
-	position: relative;
-	background-color: #ef0028;
-	margin-top: 2.75rem;
-	margin-right: -1.3rem;
-}
-
-.terminal-section .red-indicator:before {
-	content: '';
-	display: block;
-	background-color: #ef0028;
-	z-index: -1;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 1rem;
-	height: 1rem;
-	border-radius: 50%;
-	animation: pulse 1.8s infinite ease-in;
-}
-
-@keyframes pulse {
-	from {
-		transform: scale(0.5);
-		opacity: 1;
-	}
-
-	to {
-		transform: scale(2.3);
-		opacity: 0;
-	}
-}
-
 /* landing page carousel */
 
 .carousel {
@@ -216,7 +179,7 @@ textarea::-webkit-scrollbar-thumb:active {
 /* patron section */
 
 .patron-section {
-	margin: 5rem 0;
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
