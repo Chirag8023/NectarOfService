@@ -106,21 +106,15 @@ textarea::-webkit-scrollbar-thumb:active {
 	box-shadow: 0px 0px #000;
 }
 
-.terminal-section {
-	display: flex;
-	gap: 2rem;
-	width: 90%;
-	height: auto;
-	margin: 9rem auto 0 auto;
-}
-
 /* landing page carousel */
 
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin: 3rem auto;
+    margin: 2rem auto;
+	border: 10px solid black;
+	box-shadow: 0 0 10px #0005;
 }
 
 .carousel-inner {
@@ -178,16 +172,7 @@ textarea::-webkit-scrollbar-thumb:active {
 
 /* patron section */
 
-.patron-section {
-	margin: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-left: 13px solid #000;
-	background: #11111119;
-}
-
-.patron-button {
+.final-button {
 	display: flex;
 	font-family: 'inter';
 	background: #ffc900;
@@ -195,13 +180,12 @@ textarea::-webkit-scrollbar-thumb:active {
 	font-size: 1.5rem;
 	padding: 1.5rem 2rem;
 	border: 3px solid black;
-	transition: background 0.2s ease-in-out, color 0.2s ease-in-out, padding-right 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.patron-button:hover {
+.final-button:hover {
 	background: #000;
 	color: #fff;
-	padding-right: 0;
 }
 
 /* footer */
@@ -529,8 +513,7 @@ a:hover {
 }
 
 .terminal-body {
-	width: 50%;
-	flex: 1;
+	width: 60%;
 	padding: 0;
 	margin: 0 auto;
 }
@@ -584,7 +567,7 @@ a:hover {
 	background-color: black;
 	color: #fff;
 	font-family: 'JetBrainsMono';
-	font-size: 1.3rem;
+	font-size: 1.6rem;
 	font-weight: 500;
 	margin-top: -30px;
 	padding: 0rem 1rem;
@@ -592,7 +575,7 @@ a:hover {
 	border-top: none;
 	white-space: pre-line;
 	overflow: hidden;
-	height: 21rem;
+	height: 25rem;
 }
 
 #terminal-text::after {

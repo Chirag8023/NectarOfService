@@ -47,7 +47,7 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
 
     <div style="margin: 5rem 1.5rem; display:flex; flex-direction:column;">
         <h1 style="font-size:2.5rem; line-height:1.3; text-align:center;">
-            How is your donation utilized?
+            How all the donation is utilized ?
         </h1>
         <div style="display:flex;">
             <div style="width:50%; display:flex; flex-direction:column; align-items:center; text-align:center;">
@@ -69,29 +69,20 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
         </div>
     </div>
 
-    <div class="patron-section">
-        <div style="flex:1; padding: 2rem;">
-            <h1 style="font-weight:700; font-size:2.5rem;">Founder Patron Program</h1>
-            <p style="font-weight:500; font-size:1.5rem;">Join our patron program today and be part of mission to serve.</p>
-        </div>
-        <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; margin:1rem; display:flex;">
-            <button class="patron-button">Become Patron</button>
-            <button class="patron-button" style="border-left:none; background:#000; color:#fff; font-size:3rem; padding:0 1rem;">
-                <span style="transform:translateY(0.8rem);">↗</span>
-            </button>
-        </a>
+    <h1 style="text-align: center; font-size: 2.3rem;"> Each donation is a step</h1>
+    <?php include 'terminal_stats/terminal_stats.php'; ?>
+    
+    <h1 style="text-align: center; margin: 8rem auto 0 auto; font-size: 2.3rem;"> Every donation counts towards goal of making a difference</h1>
+    <div style="display:flex; width:70%; margin: 5rem auto; justify-content:space-around; align-items: center; margin-bottom: 8rem;">
+            <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; display:flex;">
+                <button class="final-button">Become Patron</button>
+            </a>
+            <h2>Now choice is yours</h2>    
+            <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php" style="text-decoration: none; display:flex;">
+                <button class="final-button">Make Donation</button>
+            </a>
     </div>
-
-    <div class="terminal-section">
-        <?php include 'terminal_stats/terminal_stats.php'; ?>
-        <p style="flex:1; font-weight:700; font-size:2rem;">
-            Join the movement!<br><br>Every donation counts towards goal of making a difference.<br><br>
-                <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php">
-                    <button style="padding:0.8rem 2rem; font-size:1.6rem; font-weight:700;" class="header-button"> Make Difference </button>
-                </a>
-        </p>
-    </div>
-
+    
     <?php include 'newsletter/newsletter.php'; ?>
 
     <?php include 'footer.php'; ?>
