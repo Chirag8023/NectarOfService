@@ -47,41 +47,44 @@ margin-right:-0.5rem; margin-left:-1%; padding-left: 0.8rem; border-bottom: 2px 
 
     <div style="margin: 5rem 1.5rem; display:flex; flex-direction:column;">
         <h1 style="font-size:2.5rem; line-height:1.3; text-align:center;">
-            How all the donation is utilized ?
+            How all the donations are utilized ?
         </h1>
         <div style="display:flex;">
             <div style="width:50%; display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-yellow-heart.png" width="150rem">
+                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-yellow-heart.png" width="150rem" style="filter: drop-shadow(0px -4px 16px #0002);">
                 <h1 style="align-self:center; font-size:1.6rem; font-weight:705;">Feeding<br>The Souls</h1>
             </div>
             <div style="width:50%; display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-lotus.png" width="150rem">
+                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-lotus.png" width="150rem" style="filter: drop-shadow(0px 0px 16px #0002);">
                 <h1 style="align-self:center; font-size:1.6rem; font-weight:705;">Building<br>Temples</h1>
             </div>
             <div style="width:50%; display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-smiling-face-with-smiling-eyes-emoji.png" width="150rem">
+                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-smiling-face-with-smiling-eyes-emoji.png" width="150rem" style="filter: drop-shadow(0px -4px 10px #0002);">
                 <h1 style="align-self:center; font-size:1.6rem; font-weight:705;">Spreading<br>Joy</h1>
             </div>
             <div style="width:50%; display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-people.png" width="150rem">
+                <img src="http://localhost/nectarofservice/assets/images/3d-fluency-people.png" width="150rem" style="filter: drop-shadow(0px 0px 16px #0002);">
                 <h1 style="align-self:center; font-size:1.6rem; font-weight:705;">Community<br> Empowerment</h1>
             </div>
         </div>
     </div>
 
-    <h1 style="text-align: center; font-size: 2.3rem;"> Each donation is a step</h1>
+    <h1 style="text-align: center; font-size: 2.3rem; display: flex; justify-content: center; align-items: center; gap:0.8rem;"><div class="red-indicator"></div>Live Statistics</h1>
     <?php include 'terminal_stats/terminal_stats.php'; ?>
-    
-    <h1 style="text-align: center; margin: 8rem auto 0 auto; font-size: 2.3rem;"> Every donation counts towards goal of making a difference</h1>
-    <div style="display:flex; width:70%; margin: 5rem auto; justify-content:space-around; align-items: center; margin-bottom: 8rem;">
-            <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none; display:flex;">
-                <button class="final-button">Become Patron</button>
-            </a>
-            <h2>Now choice is yours</h2>    
-            <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php" style="text-decoration: none; display:flex;">
-                <button class="final-button">Make Donation</button>
-            </a>
+
+    <div style="background: url(http://localhost/NectarOfService/assets/images/duotone2.png); background-size:cover; background-position: center; width:90%; margin:5rem auto; padding:2rem 0; border-radius: 22px; ">
+    <h1 style="font-family: 'bungee'; font-weight: 100; line-height: 1.5; text-align: center; margin:0; font-size: 2.5rem; background: #0007 ; color: #fff; padding: 1rem; text-shadow: 4px 4px #000; mix-blend-mode: multiply;">Let's serve to greater cause, together !</h1>
+    <p style="color: #111; text-align: center; font-size: 1.8rem; font-weight:700; margin: 1.4rem auto; width:70%;">Join us in spreading joy and empowerment, inspired by the spirit of impactful initiatives.</p>
+    <div style="display: flex; margin: auto; justify-content: space-between; margin-top:4rem; width:60%;">
+        <a href="http://localhost/NectarOfService/fundraiser/campaigns_home.php" style="text-decoration: none;">
+            <button class="final-button" style="background: #0000;">Make Donation</button>
+        </a>
+        <a href="https://forms.gle/H8swUTSpBsi6c5sD9" target="_blank" style="text-decoration: none;">
+            <button class="final-button" style="background: #000; color: #fff;">Become Patron</button>
+        </a>
     </div>
+    </div>
+
     
     <?php include 'newsletter/newsletter.php'; ?>
 
