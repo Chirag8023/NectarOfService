@@ -7,9 +7,9 @@
         <p>Get updates about how your contributions are making impact!</p>
         <p id="successMessage" style="color: #c02;"></p>
         <form id="newsletterForm">
-            <input type="text" id="name" name="subscriber_name" placeholder="Name" required>
+            <input type="text" id="name" name="subscriber_name" placeholder="Name" required style="border-top-left-radius:4px; border-bottom-left-radius:4px;">
             <input type="email" id="email" name="subscriber_email" placeholder="Email" required>
-            <button type="submit">&#8594;</button>
+            <button type="submit" style="border-top-right-radius:4px; border-bottom-right-radius:4px;">&#8594;</button>
         </form>
     </div>
 </div>
