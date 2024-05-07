@@ -101,7 +101,7 @@ input[type="submit"]:hover {
         </form>
     </div>
     <div class="trademark" style="text-align: right;">
-        <p>© 2024 Dummy Paypal by Chirag Arora.</p>
+        <p>© 2024 Dummy Paypal by NectarOfService.</p>
     </div>
     <script>
     function processPayment() {

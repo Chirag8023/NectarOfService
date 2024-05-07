@@ -94,6 +94,6 @@ footer {
     </script>
 
     <footer>
-        <p>&copy; 2024 Dummy UPI Interface by Chirag Arora.</p>
+        <p>&copy; 2024 Dummy UPI Interface by NectarOfService.</p>
     </footer>
 </body>
